@@ -51,8 +51,7 @@ public class MyApplication {
             current.show();
             return;
         }
-        Form hi = new Form("Hi World", BoxLayout.y());
-        hi.add(new Label("Hi World"));
+        Form hi = new Form("CyclePro", BoxLayout.y());
         hi.show();
     }
 
