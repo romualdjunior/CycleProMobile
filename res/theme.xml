@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="E-mail Button.png"  />
+    <image name="event8.jpg"  />
+    <image name="Group 278.png"  />
+    <image name="Login me.png"  />
+    <image name="Logo.png"  />
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+        <val key="Toolbar.bgColor" value="FF0000" />
+        <val key="Toolbar.fgColor" value="FFFF00" />
+        <val key="Toolbar.sel#bgColor" value="FF0000" />
+    </theme>
+    <image name="Top Photo.jpg"  />
+    <image name="Top Photo.png"  />
+</resource>
