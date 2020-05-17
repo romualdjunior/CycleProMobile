@@ -1,7 +1,11 @@
 package MyApp;
 
 import Forms.Frontend.HomeForm;
-import Forms.Frontend.SignIn;
+import Forms.Commande.ProduitSingleForm;
+import Forms.Commande.ShopForm;
+import Forms.Frontend.SignInForm;
+import Forms.Frontend.WalkthruForm;
+import Forms.Frontend.WalkthruForm;
 import static com.codename1.ui.CN.*;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
@@ -14,6 +18,7 @@ import com.codename1.ui.Toolbar;
 import java.io.IOException;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
+import com.codename1.io.Storage;
 import static com.codename1.ui.ComponentSelector.$;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
@@ -56,13 +61,17 @@ public class MyApplication {
             current.show();
             return;
         }
-        HomeForm home = new HomeForm();
-        Style s = UIManager.getInstance().getComponentStyle("TitleCommand");
-        FontImage icon = FontImage.createMaterial(FontImage.MATERIAL_WARNING, s);
-        home.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
-       home.getToolbar().addCommandToSideMenu("Sidemenu", icon, (e) -> Log.p("Clicked"));
-       home.show();
-        //new SignIn().show();
+        
+//        SignInForm s = new SignInForm();
+//        Style style = UIManager.getInstance().getComponentStyle("TitleCommand");
+//        FontImage icon = FontImage.createMaterial(FontImage.MATERIAL_WARNING, style);
+//        s.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
+//        s.getToolbar().addCommandToSideMenu("Sidemenu", icon, (e) -> Log.p("Clicked"));
+//        s.show();
+          // new HomeForm().show();
+//           new WalkthruForm(theme).show();
+         new ShopForm(theme).show();
+//                new ProduitSingleForm(theme).show();
     }
 
     public void stop() {

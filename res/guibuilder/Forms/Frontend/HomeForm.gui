@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgImage:Group 278.png;" title="HomeForm" scrollableY="false" name="HomeForm">
-  <component type="Label" text="" preferredSize="inherit 119.84127mm" name="logo_gif">
+  <component type="Label" preferredSize="inherit 119.84127mm" name="logo_gif">
     <layoutConstraint insets="0px 0px 0px 0px" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>
 </component>

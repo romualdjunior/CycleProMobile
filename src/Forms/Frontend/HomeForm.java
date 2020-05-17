@@ -11,7 +11,7 @@ import static com.codename1.ui.CN.log;
 import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.util.UITimer;
 import java.io.IOException;
-import Forms.Frontend.SignIn;
+import Forms.Frontend.SignInForm;
 import com.codename1.io.Log;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.plaf.Style;
@@ -26,11 +26,14 @@ public class HomeForm extends com.codename1.ui.Form {
 
     public HomeForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
+        this.getToolbar().addCommandToLeftBar("<-", null, (evt) -> {
+            this.showBack();
+        });
         try {
             gui_logo_gif.getStyle().setBgImage(GifImage.decode(getResourceAsStream("/Splash_1.gif"), 1177720));
             UITimer uit = new UITimer(() -> {
                 this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
-                SignIn s = new SignIn();
+                SignInForm s = new SignInForm();
                 Style style = UIManager.getInstance().getComponentStyle("TitleCommand");
                 FontImage icon = FontImage.createMaterial(FontImage.MATERIAL_WARNING, style);
                 s.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
@@ -49,7 +52,7 @@ public class HomeForm extends com.codename1.ui.Form {
         initGuiBuilderComponents(resourceObjectInstance);
     }
 
-//////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_logo_gif = new com.codename1.ui.Label();
 
 
@@ -63,7 +66,6 @@ public class HomeForm extends com.codename1.ui.Form {
         setTitle("HomeForm");
         setName("HomeForm");
         gui_logo_gif.setPreferredSizeStr("inherit 119.84127mm");
-        gui_logo_gif.setText("");
                 gui_logo_gif.setInlineStylesTheme(resourceObjectInstance);
         gui_logo_gif.setName("logo_gif");
         addComponent(gui_logo_gif);

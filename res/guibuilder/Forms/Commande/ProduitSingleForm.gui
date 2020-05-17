@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:fbfcfe;" title="ProduitSingleForm" scrollableY="false" name="ProduitSingleForm">
+  <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="60.84656" layeredLayoutPreferredHeightMM="67.46032"  preferredSize="60.582012mm 67.46032mm" name="Layered_Layout">
+    <layoutConstraint insets="0.0mm 3.7037027mm 7.4074078mm 9.328358%" referenceComponents="-1 -1 1 -1" referencePositions="0.0 0.0 1.0 0.0" />
+    <component type="Label" styles="bgImage:Mask.png;" preferredSize="61.11111mm 66.93122mm" name="Label_6">
+      <layoutConstraint insets="0.0mm 0.0mm 4.2328043mm 0.0mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Button" styles="bgImage:audi.png;" preferredSize="38.62434mm 28.042328mm" name="produit">
+      <layoutConstraint insets="25.390625% auto 33.203125% 0.0mm" referenceComponents="-1 0 -1 2 " referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="Cross Bikes" styles="font:3.0mm; fgColor:333333;" preferredSize="inherit 3.1746032mm" name="produit_nom">
+      <layoutConstraint insets="6.878307mm auto 83.59375% 8.201058mm" referenceComponents="-1 0 -1 0 " referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="$89" styles="font:4.0mm native:MainBold native:MainBold; fgColor:fe7b37;" preferredSize="inherit 3.968254mm" name="produit_prix">
+      <layoutConstraint insets="1.5873013mm auto auto 1.5873013mm" referenceComponents="2 0 -1 2 " referencePositions="1.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" styles="font:3.0mm; fgColor:333333; bgImage:Outlined-UI-favourite.png;" preferredSize="3.4391534mm 3.4391534mm" name="">
+      <layoutConstraint insets="auto 8.994709mm 5.820106mm auto" referenceComponents="0 0 1 2 " referencePositions="0.0 0.0 1.0 1.0" />
+    </component>
+    <component type="Label" text="lorep ipsum dmslkdsdcvxvxxdsfds" styles="font:3.0mm native:MainRegular native:MainRegular; fgColor:333333;" preferredSize="inherit 3.968254mm" name="produt_description">
+      <layoutConstraint insets="auto 0.0mm 11.790393% 0.0mm" referenceComponents="-1 1 0 1 " referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+  </component>
+  <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="35.714287" layeredLayoutPreferredHeightMM="63.227512"  preferredSize="35.714287mm 63.227512mm" name="Layered_Layout_1">
+    <layoutConstraint insets="1.8518524mm 0.0mm 0.0mm auto" referenceComponents="2 -1 2 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" styles="bgImage:Mask.png;" preferredSize="32.010582mm 35.978836mm" name="Label_10">
+      <layoutConstraint insets="19.485294% -0.52910054mm 16.16228% 3.174603mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Button" styles="bgImage:mercedes.png;" preferredSize="24.074074mm 14.814815mm" name="sous_produit_2	">
+      <layoutConstraint insets="28.963062% 5.8201056mm auto 25.497513%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="Cross Bikes" styles="font:3.0mm; fgColor:333333;" name="Label_10">
+      <layoutConstraint insets="0.5291003mm auto 68.12404% 2.6455026mm" referenceComponents="1 -1 -1 1 " referencePositions="1.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="728 ITEM" styles="font:2.0mm native:MainLight native:MainLight; fgColor:333333;" name="Label_13">
+      <layoutConstraint insets="5.8201056mm auto auto 0.52910054mm" referenceComponents="1 2 0 2 " referencePositions="1.0 0.0 0.0 0.0" />
+    </component>
+  </component>
+  <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="36.772488" layeredLayoutPreferredHeightMM="58.73016"  preferredSize="36.772488mm 58.73016mm" name="Layered_Layout_2">
+    <layoutConstraint insets="49.909584% auto 9.94575% -4.7619076mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" styles="bgImage:Mask.png;" preferredSize="37.301586mm 36.772488mm" name="Label_12">
+      <layoutConstraint insets="21.838236% -0.52910054mm 14.264994% 3.4391532mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Button" styles="bgImage:audi.png;" preferredSize="24.074074mm 14.814815mm" name="sous_produit_1">
+      <layoutConstraint insets="28.963062% 5.8201056mm auto 25.497513%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="Cross Bikes" styles="font:3.0mm; fgColor:333333;" name="Label_12">
+      <layoutConstraint insets="0.5291003mm auto 68.12404% 2.6455026mm" referenceComponents="1 -1 -1 1 " referencePositions="1.0 0.0 0.0 0.0" />
+    </component>
+    <component type="Label" text="728 ITEM" styles="font:2.0mm native:MainLight native:MainLight; fgColor:333333;" name="Label_14">
+      <layoutConstraint insets="5.8201056mm auto auto 0.52910054mm" referenceComponents="1 2 0 2 " referencePositions="1.0 0.0 0.0 0.0" />
+    </component>
+  </component>
+  <component type="Button" text="Catalogue" styles="font:3.0mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png; alignment:center;" preferredSize="22.486773mm inherit" name="catalogue">
+    <layoutConstraint insets="0.0mm auto 6.084656mm 1.8518519mm" referenceComponents="1 -1 -1 -1" referencePositions="1.0 0.0 0.0 0.0" />
+  </component>
+  <component type="Button" text="Ajouter" styles="font:3.0mm; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;" name="ajouter">
+    <layoutConstraint insets="0.0mm 0.0mm 0.0mm 62.204727%" referenceComponents="1 0 3 -1" referencePositions="1.0 0.0 0.0 0.0" />
+  </component>
+  <component type="Label" text="Quantite:" styles="fgColor:0;" disabledStyles="fgColor:0;" preferredSize="21.16402mm inherit" name="Label">
+    <layoutConstraint insets="auto 37.30159mm 0.0mm auto" referenceComponents="-1 -1 1 0 " referencePositions="0.0 0.0 1.0 0.0" />
+  </component>
+  <component type="TextField" text="" preferredSize="23.015873mm 5.555556mm" name="quantite">
+    <layoutConstraint insets="0.0mm 35.37415% 0.0mm 0.0mm" referenceComponents="0 -1 1 2 " referencePositions="1.0 0.0 1.0 1.0" />
+  </component>
+</component>

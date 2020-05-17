@@ -52,7 +52,6 @@ public class UserService {
     }
     public String connection(String username,String password) {
         String url = Statics.BASE_URL + "/"+username+"/"+ password;
-        System.out.println(url);
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
