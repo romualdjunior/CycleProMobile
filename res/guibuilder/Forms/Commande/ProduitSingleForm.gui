@@ -61,7 +61,7 @@
   <component type="Label" text="Quantite:" styles="fgColor:0;" disabledStyles="fgColor:0;" preferredSize="21.16402mm inherit" name="Label">
     <layoutConstraint insets="auto 37.30159mm 0.0mm auto" referenceComponents="-1 -1 1 0 " referencePositions="0.0 0.0 1.0 0.0" />
   </component>
-  <component type="TextField" text="" preferredSize="23.015873mm 5.555556mm" name="quantite">
+  <component type="TextField" preferredSize="23.015873mm 5.555556mm" name="quantite">
     <layoutConstraint insets="0.0mm 35.37415% 0.0mm 0.0mm" referenceComponents="0 -1 1 2 " referencePositions="1.0 0.0 1.0 1.0" />
   </component>
 </component>

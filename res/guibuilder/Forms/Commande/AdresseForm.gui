@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:fbfcfe;" title="CommandeForm" scrollableY="true" name="CommandeForm">
+  <component type="Label" styles="bgImage:6974122_preview.png;" preferredSize="28.571428mm 25.396826mm" name="commande_image">
+    <layoutConstraint insets="1.5873017mm auto auto 28.35821%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="51.587303mm 7.4074073mm" name="Box_Layout_X">
+    <layoutConstraint insets="38.517178% 17.537312% auto 10.074629%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Phone:" name="phone_label">
+    </component>
+    <component type="TextField" name="phone">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="51.851852mm 7.4074073mm" name="Box_Layout_X_1">
+    <layoutConstraint insets="auto 19.997654% 13.562387% 5.026455mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Adresse:" name="adresse_label">
+    </component>
+    <component type="TextField" name="adresse">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="51.851852mm 7.142857mm" name="Box_Layout_X_2">
+    <layoutConstraint insets="auto 19.997652% 20.253166% 5.026455mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="PIncode:" name="pincode_label">
+    </component>
+    <component type="TextField" name="pincode">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="49.4709mm 7.4074073mm" name="Box_Layout_X_3">
+    <layoutConstraint insets="auto 19.62452% 26.58228% 10.972496%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Etat:    " name="etat_label">
+    </component>
+    <component type="TextField" name="etat">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="49.73545mm 7.6719575mm" name="Box_Layout_X_4">
+    <layoutConstraint insets="auto 19.62452% 33.453888% 10.599361%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Ville:    " name="ville_label">
+    </component>
+    <component type="TextField" name="ville">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="50.0mm 7.6719575mm" name="Box_Layout_X_5">
+    <layoutConstraint insets="auto 19.251385% 41.59132% 10.599361%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Pays:   " name="pays_label">
+    </component>
+    <component type="TextField" name="pays">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="50.529102mm 7.936508mm" name="Box_Layout_X_6">
+    <layoutConstraint insets="45.04103% 18.505116% auto 10.599361%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Email:  " name="email_label">
+    </component>
+    <component type="TextField" name="email">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="51.851852mm 7.4074073mm" name="Box_Layout_X_7">
+    <layoutConstraint insets="25.149532% 16.791044% auto 10.074628%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Nom:   " name="Label_7">
+    </component>
+    <component type="TextField" name="nom">
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="53.703705mm 7.4074073mm" name="Box_Layout_X_8">
+    <layoutConstraint insets="32.201973% 17.910444% auto 4.7619047mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Prenom:" name="prenom_label">
+    </component>
+    <component type="TextField" name="prenom">
+    </component>
+  </component>
+  <component type="Button" text="Valider" styles="font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:ffffff; fgColor:ffffff; bgImage:Background.png;" preferredSize="24.074074mm inherit" name="valider">
+    <layoutConstraint insets="auto auto 4.232804mm 31.343285%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+  </component>
+</component>

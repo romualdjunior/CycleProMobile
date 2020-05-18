@@ -36,7 +36,7 @@ public class UserService {
     }
 
     public boolean addUser(User user) {
-        String url = Statics.BASE_URL + "/users/" + user.getUsername() + "/" + user.getPassword();
+        String url = Statics.BASE_URL + "/connexionMobile/users/" + user.getUsername() + "/" + user.getPassword();
 
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -51,7 +51,7 @@ public class UserService {
         return responseResult;
     }
     public String connection(String username,String password) {
-        String url = Statics.BASE_URL + "/"+username+"/"+ password;
+        String url = Statics.BASE_URL + "/connexionMobile/"+username+"/"+ password;
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override

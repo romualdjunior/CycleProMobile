@@ -2,9 +2,12 @@ package Forms.Commande;
 
 import Models.Commande.Panier;
 import com.codename1.io.Storage;
+import com.codename1.messaging.Message;
+import com.codename1.notifications.LocalNotification;
 import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.Dialog;
+import com.codename1.ui.Display;
 import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.util.Resources;
 import java.util.ArrayList;
@@ -14,69 +17,75 @@ public class ShopForm extends Form {
 
     public ShopForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
+//          LocalNotification ln = new LocalNotification();
+//            ln.setId("LnMessage");
+//            ln.setAlertTitle("Welcome");
+//            ln.setAlertBody("Thanks for arriving!");
+//            Display.getInstance().scheduleLocalNotification(ln, 1000, LocalNotification.REPEAT_NONE);
+       
         gui_produit_1.addActionListener((evt) -> {
             String prix = gui_prix_1.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
             ProduitSingle.add(new Panier(1, gui_produit_nom_1.getText(), Integer.parseInt(prix2), 0, gui_produit_1.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-         gui_produit_2.addActionListener((evt) -> {
+        gui_produit_2.addActionListener((evt) -> {
             String prix = gui_prix_2.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(1, gui_produit_nom_2.getText(), Integer.parseInt(prix2), 0, gui_produit_2.getStyle().getBgImage(), 0));
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
+            ProduitSingle.add(new Panier(2, gui_produit_nom_2.getText(), Integer.parseInt(prix2), 0, gui_produit_2.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-          gui_produit_3.addActionListener((evt) -> {
+        gui_produit_3.addActionListener((evt) -> {
             String prix = gui_prix_3.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(1, gui_produit_nom_3.getText(), Integer.parseInt(prix2), 0, gui_produit_3.getStyle().getBgImage(), 0));
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
+            ProduitSingle.add(new Panier(3, gui_produit_nom_3.getText(), Integer.parseInt(prix2), 0, gui_produit_3.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-           gui_produit_4.addActionListener((evt) -> {
+        gui_produit_4.addActionListener((evt) -> {
             String prix = gui_prix_4.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(1, gui_produit_nom_4.getText(), Integer.parseInt(prix2), 0, gui_produit_4.getStyle().getBgImage(), 0));
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
+            ProduitSingle.add(new Panier(4, gui_produit_nom_4.getText(), Integer.parseInt(prix2), 0, gui_produit_4.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-            gui_produit_5.addActionListener((evt) -> {
+        gui_produit_5.addActionListener((evt) -> {
             String prix = gui_prix_5.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(1, gui_produit_nom_5.getText(), Integer.parseInt(prix2), 0, gui_produit_5.getStyle().getBgImage(), 0));
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
+            ProduitSingle.add(new Panier(5, gui_produit_nom_5.getText(), Integer.parseInt(prix2), 0, gui_produit_5.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-             gui_produit_6.addActionListener((evt) -> {
+        gui_produit_6.addActionListener((evt) -> {
             String prix = gui_prix_6.getText();
             String prix2 = prix.substring(1, 3);
             System.out.println(prix2);
-            List<Panier> ProduitSingle=new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(1, gui_produit_nom_6.getText(), Integer.parseInt(prix2), 0, gui_produit_6.getStyle().getBgImage(), 0));
+            List<Panier> ProduitSingle = new ArrayList<Panier>();
+            ProduitSingle.add(new Panier(6, gui_produit_nom_6.getText(), Integer.parseInt(prix2), 0, gui_produit_6.getStyle().getBgImage(), 0));
             Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-            
+
     }
 
-////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();

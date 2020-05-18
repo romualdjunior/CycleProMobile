@@ -24,7 +24,13 @@ public class SignInForm extends com.codename1.ui.Form {
 
     public SignInForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
-        gui_login.addActionListener((evt) -> {
+       
+      
+    }
+
+    public SignInForm(com.codename1.ui.util.Resources resourceObjectInstance) {
+        initGuiBuilderComponents(resourceObjectInstance);
+         gui_login.addActionListener((evt) -> {
             if ((gui_username.getText().length() == 0) || (gui_password.getText().length() == 0)) {
                 Dialog.show("Alert", "Please fill all the fields", "OK", null);
             } else {
@@ -34,7 +40,7 @@ public class SignInForm extends com.codename1.ui.Form {
                     if (tmp.startsWith("Utilisateur existant")) {
 
                         if (Dialog.show("SUCCESS", tmp, "OK", null)) {
-                         
+                          new WalkthruForm(resourceObjectInstance).show();
                         }
 
                     } else {
@@ -47,14 +53,9 @@ public class SignInForm extends com.codename1.ui.Form {
             }
         });
 
-      
     }
 
-    public SignInForm(com.codename1.ui.util.Resources resourceObjectInstance) {
-        initGuiBuilderComponents(resourceObjectInstance);
-    }
-
-////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_Label = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_2 = new com.codename1.ui.Label();

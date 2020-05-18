@@ -1,5 +1,6 @@
 package MyApp;
 
+import Forms.Commande.PanierForm;
 import Forms.Frontend.HomeForm;
 import Forms.Commande.ProduitSingleForm;
 import Forms.Commande.ShopForm;
@@ -20,8 +21,10 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.Storage;
 import static com.codename1.ui.ComponentSelector.$;
+import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
+import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.plaf.Style;
 
 /**
@@ -61,17 +64,12 @@ public class MyApplication {
             current.show();
             return;
         }
-        
-//        SignInForm s = new SignInForm();
-//        Style style = UIManager.getInstance().getComponentStyle("TitleCommand");
-//        FontImage icon = FontImage.createMaterial(FontImage.MATERIAL_WARNING, style);
-//        s.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
-//        s.getToolbar().addCommandToSideMenu("Sidemenu", icon, (e) -> Log.p("Clicked"));
-//        s.show();
-          // new HomeForm().show();
-//           new WalkthruForm(theme).show();
-         new ShopForm(theme).show();
+
+
+         new HomeForm().show();
 //                new ProduitSingleForm(theme).show();
+//       new PanierForm().show();
+      
     }
 
     public void stop() {

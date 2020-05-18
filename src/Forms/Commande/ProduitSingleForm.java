@@ -43,13 +43,15 @@ public class ProduitSingleForm extends Form {
             if (this.nbr_chargement == 0) {
                 panier.add(ProduitSingle.get(0));
                 Storage.getInstance().writeObject("Panier", panier);
-            
+                new PanierForm(resourceObjectInstance).show();
+
                 this.nbr_chargement++;
             } else {
                 panier.clear();
                 panier.addAll(((List<Panier>) Storage.getInstance().readObject("Panier")));
                 panier.add(ProduitSingle.get(0));
                 Storage.getInstance().writeObject("Panier", panier);
+                new PanierForm(resourceObjectInstance).show();
 
             }
             System.out.println(panier);
@@ -57,7 +59,7 @@ public class ProduitSingleForm extends Form {
 
     }
 
-////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_Label_6 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit = new com.codename1.ui.Button();
@@ -115,7 +117,6 @@ public class ProduitSingleForm extends Form {
         gui_Label.setInlineDisabledStyles("fgColor:0;");
         gui_Label.setName("Label");
         gui_quantite.setPreferredSizeStr("23.015873mm 5.555556mm");
-        gui_quantite.setText("");
                 gui_quantite.setInlineStylesTheme(resourceObjectInstance);
         gui_quantite.setName("quantite");
         addComponent(gui_Layered_Layout);

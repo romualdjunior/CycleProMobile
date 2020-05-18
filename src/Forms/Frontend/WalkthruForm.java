@@ -5,6 +5,7 @@
  */
 package Forms.Frontend;
 
+import Forms.Commande.ShopForm;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
@@ -252,7 +253,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
 
         Button skip = new Button(res.getImage("Button.png"));
         skip.setUIID("SkipButton");
-        //skip.addActionListener(e -> new ProfileForm(res).show());
+        skip.addActionListener(e -> new ShopForm(res).show());
         Container southLayout = BoxLayout.encloseX(
                 radioContainer,
                 new Label("                                      "),
@@ -272,7 +273,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
 
     }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Button gui_Button = new com.codename1.ui.Button();
 
 

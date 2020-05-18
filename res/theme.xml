@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="6974122_preview.png"  />
     <image name="audi.png"  />
     <image name="back-command.png" type="multi"  />
     <image name="back-command.png1" type="multi"  />
@@ -27,6 +28,7 @@
     <image name="Button.dis#borderTopR_1.png" type="multi"  />
     <image name="Button.dis#borderTopR_1.png1" type="multi"  />
     <image name="Button.png"  />
+    <image name="Button_background.png"  />
     <image name="cal_left_arrow.png" type="multi"  />
     <image name="cal_left_arrow.png1" type="multi"  />
     <image name="cal_right_arrow.png" type="multi"  />
@@ -97,11 +99,13 @@
     <image name="Group 278.png"  />
     <image name="Group 279.png"  />
     <image name="Group 280.png"  />
+    <image name="Icon material-delete.png"  />
     <image name="kisspng-audi-car-clip-art-audi-5abc1c2fe97627.8201284915222774239563.png"  />
     <image name="Login me.png"  />
     <image name="login-background.jpg"  />
     <image name="Logo.png"  />
     <image name="Mask.png"  />
+    <image name="Mask2.png"  />
     <image name="Menu.borderBottom_2.png" type="multi"  />
     <image name="Menu.borderBottom_2.png1" type="multi"  />
     <image name="Menu.borderBottomL_2.png" type="multi"  />
@@ -173,7 +177,6 @@
     <image name="text-field-underline.png"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
-        <val key="Label.fgColor" value="ffffff" />
     </theme>
     <image name="TitleArea.borderBottom_2.png" type="multi"  />
     <image name="TitleArea.borderBottom_2.png1" type="multi"  />
