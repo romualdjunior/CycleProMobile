@@ -5,32 +5,48 @@
  */
 package Forms.Frontend;
 
+import Forms.BaseForm;
 import Services.User.UserService;
+import com.codename1.components.FloatingActionButton;
+import com.codename1.components.RadioButtonList;
 import com.codename1.io.Log;
+import com.codename1.ui.Button;
+import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
+import com.codename1.ui.Form;
+import com.codename1.ui.Image;
+import com.codename1.ui.Sheet;
 import com.codename1.ui.animations.CommonTransitions;
+import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.geom.Rectangle;
+import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.layouts.LayeredLayout;
+import com.codename1.ui.list.DefaultListModel;
+import com.codename1.ui.plaf.RoundBorder;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
+import com.codename1.ui.util.Resources;
 
 /**
  * GUI builder created Form
  *
  * @author toshiba
  */
-public class SignInForm extends com.codename1.ui.Form {
+public class SignInForm extends Form {
 
     String tmp = "";
 
     public SignInForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
-       
-      
+
     }
 
     public SignInForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
-         gui_login.addActionListener((evt) -> {
+        gui_login.addActionListener((evt) -> {
             if ((gui_username.getText().length() == 0) || (gui_password.getText().length() == 0)) {
                 Dialog.show("Alert", "Please fill all the fields", "OK", null);
             } else {
@@ -40,7 +56,7 @@ public class SignInForm extends com.codename1.ui.Form {
                     if (tmp.startsWith("Utilisateur existant")) {
 
                         if (Dialog.show("SUCCESS", tmp, "OK", null)) {
-                          new WalkthruForm(resourceObjectInstance).show();
+                            new WalkthruForm(resourceObjectInstance).show();
                         }
 
                     } else {
@@ -53,9 +69,13 @@ public class SignInForm extends com.codename1.ui.Form {
             }
         });
 
+      
+
     }
 
-//////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+   
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_Label = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_2 = new com.codename1.ui.Label();

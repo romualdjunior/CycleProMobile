@@ -1,28 +1,46 @@
 package Forms.Commande;
 
+import Forms.BaseForm;
+import Forms.Frontend.SignInForm;
 import Models.Commande.Panier;
 import com.codename1.io.Storage;
 import com.codename1.messaging.Message;
 import com.codename1.notifications.LocalNotification;
+import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
 import com.codename1.ui.animations.CommonTransitions;
+import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopForm extends Form {
+public class ShopForm extends BaseForm {
+
 
     public ShopForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
+        List<Button> list_button = new ArrayList<Button>();
+        List<Form> list_form = new ArrayList<Form>();
+        list_button.add(new Button("manger"));
+        list_button.add(new Button("Boire"));
+
+        list_form.add(new SignInForm(resourceObjectInstance));
+        list_form.add(new AdresseForm(resourceObjectInstance));
+
+        //list_form.add(new AdresseForm(resourceObjectInstance));
+        Storage.getInstance().writeObject("theme", resourceObjectInstance);
+
+
+        installSidemenu(resourceObjectInstance, list_button, list_form);
+
 //          LocalNotification ln = new LocalNotification();
 //            ln.setId("LnMessage");
 //            ln.setAlertTitle("Welcome");
 //            ln.setAlertBody("Thanks for arriving!");
 //            Display.getInstance().scheduleLocalNotification(ln, 1000, LocalNotification.REPEAT_NONE);
-       
         gui_produit_1.addActionListener((evt) -> {
             String prix = gui_prix_1.getText();
             String prix2 = prix.substring(1, 3);
@@ -85,7 +103,7 @@ public class ShopForm extends Form {
 
     }
 
-//////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();

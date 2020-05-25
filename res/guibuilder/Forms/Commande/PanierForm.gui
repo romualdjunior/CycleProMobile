@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:fbfcfe; bgImage:null;" title="PanierForm" scrollableY="true" name="PanierForm">
-  <component type="Button" text="Catalogue" styles="font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;" preferredSize="21.693121mm 6.878307mm" name="catalogue">
+  <component type="Button" text="Catalogue" styles="font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:247; bgImage:;" preferredSize="21.693121mm 6.878307mm" name="catalogue">
     <layoutConstraint insets="auto auto 3.7037058mm 7.671959mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>
-  <component type="Button" text="Commande" styles="font:2.5mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;" preferredSize="21.428572mm 6.878307mm" name="commande">
+  <component type="Button" text="Commande" styles="font:2.5mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:236; bgImage:;" preferredSize="21.428572mm 6.878307mm" name="commande">
     <layoutConstraint insets="auto 2.9100528mm 3.7037039mm auto" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>
 </component>

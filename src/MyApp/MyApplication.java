@@ -5,6 +5,7 @@ import Forms.Frontend.HomeForm;
 import Forms.Commande.ProduitSingleForm;
 import Forms.Commande.ShopForm;
 import Forms.Frontend.SignInForm;
+import Forms.Frontend.SplashForm;
 import Forms.Frontend.WalkthruForm;
 import Forms.Frontend.WalkthruForm;
 import static com.codename1.ui.CN.*;
@@ -40,7 +41,8 @@ public class MyApplication {
         // use two network threads instead of one
         updateNetworkThreadCount(2);
 
-        theme = UIManager.initFirstTheme("/theme");
+        //theme = UIManager.initFirstTheme("/theme");
+        theme = UIManager.initNamedTheme("/theme", "Theme1");
 
         // Enable Toolbar on all Forms by default
         Toolbar.setGlobalToolbar(true);
@@ -65,11 +67,12 @@ public class MyApplication {
             return;
         }
 
-
-         new HomeForm().show();
+//         new HomeForm().show();
+        SplashForm s = new SplashForm(theme);
+        s.show();
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();
-      
+
     }
 
     public void stop() {

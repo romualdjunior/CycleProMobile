@@ -17,21 +17,33 @@ import com.codename1.ui.plaf.Style;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import Forms.BaseForm;
+import Forms.Frontend.SignInForm;
+import Forms.Frontend.WalkthruForm;
 
 /**
  * GUI builder created Form
  *
  * @author toshiba
  */
-public class PanierForm extends com.codename1.ui.Form {
+public class PanierForm extends BaseForm {
 
     public PanierForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
 
     public PanierForm(com.codename1.ui.util.Resources resourceObjectInstance) {
-        super("Border Layout", new BorderLayout());
+        new Form("Border Layout", new BorderLayout());
         initGuiBuilderComponents(resourceObjectInstance);
+        List<Button> list_button = new ArrayList<Button>();
+        List<Form> list_form = new ArrayList<Form>();
+        list_button.add(new Button("manger"));
+        list_button.add(new Button("Boire"));
+
+        list_form.add(new SignInForm(resourceObjectInstance));
+        list_form.add(new WalkthruForm(resourceObjectInstance));
+        installSidemenu(resourceObjectInstance, list_button, list_form);
+
         Container C = BoxLayout.encloseY();
         List<Panier> panier = new ArrayList<Panier>();
         panier.addAll(((List<Panier>) Storage.getInstance().readObject("Panier")));
@@ -94,7 +106,7 @@ public class PanierForm extends com.codename1.ui.Form {
 
     }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Button gui_catalogue = new com.codename1.ui.Button();
     protected com.codename1.ui.Button gui_commande = new com.codename1.ui.Button();
 
@@ -111,12 +123,12 @@ public class PanierForm extends com.codename1.ui.Form {
         gui_catalogue.setPreferredSizeStr("21.693121mm 6.878307mm");
         gui_catalogue.setText("Catalogue");
                 gui_catalogue.setInlineStylesTheme(resourceObjectInstance);
-        gui_catalogue.setInlineAllStyles("font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;");
+        gui_catalogue.setInlineAllStyles("font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:247; bgImage:;");
         gui_catalogue.setName("catalogue");
         gui_commande.setPreferredSizeStr("21.428572mm 6.878307mm");
         gui_commande.setText("Commande");
                 gui_commande.setInlineStylesTheme(resourceObjectInstance);
-        gui_commande.setInlineAllStyles("font:2.5mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;");
+        gui_commande.setInlineAllStyles("font:2.5mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:236; bgImage:;");
         gui_commande.setName("commande");
         addComponent(gui_catalogue);
         addComponent(gui_commande);

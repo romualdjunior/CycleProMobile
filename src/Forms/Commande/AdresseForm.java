@@ -5,18 +5,28 @@
  */
 package Forms.Commande;
 
+import Forms.BaseForm;
+import Forms.Frontend.SignInForm;
+import Forms.Frontend.WalkthruForm;
 import Models.Commande.Adresse;
 import Services.Commande.AdresseService;
+import com.codename1.io.Storage;
 import com.codename1.messaging.Message;
+import com.codename1.ui.Button;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
+import com.codename1.ui.Form;
+import com.codename1.ui.plaf.UIManager;
+import com.codename1.ui.util.Resources;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GUI builder created Form
  *
  * @author toshiba
  */
-public class AdresseForm extends com.codename1.ui.Form {
+public class AdresseForm extends BaseForm {
 
     public AdresseForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
@@ -24,6 +34,16 @@ public class AdresseForm extends com.codename1.ui.Form {
 
     public AdresseForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
+
+        List<Button> list_button = new ArrayList<Button>();
+        List<Form> list_form = new ArrayList<Form>();
+        list_button.add(new Button("manger"));
+        list_button.add(new Button("Boire"));
+
+        list_form.add(new SignInForm(resourceObjectInstance));
+        list_form.add(new WalkthruForm(resourceObjectInstance));
+
+        installSidemenu(resourceObjectInstance, list_button, list_form);
         gui_valider.addActionListener((evt) -> {
             if (gui_nom.getText().length() == 0 || gui_prenom.getText().length() == 0 || gui_phone.getText().length() == 0 || gui_email.getText().length() == 0 || gui_pays.getText().length() == 0 || gui_ville.getText().length() == 0 || gui_etat.getText().length() == 0 || gui_pincode.getText().length() == 0 || gui_adresse.getText().length() == 0) {
                 Dialog.show("Alert", "Please fill all the fields", "OK", null);
@@ -47,8 +67,12 @@ public class AdresseForm extends com.codename1.ui.Form {
             }
         });
     }
+    @Override
+      protected boolean is_current_adresse() {
+        return true;
+    }
 
-////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_commande_image = new com.codename1.ui.Label();
     protected com.codename1.ui.Container gui_Box_Layout_X = new com.codename1.ui.Container(new com.codename1.ui.layouts.BoxLayout(com.codename1.ui.layouts.BoxLayout.X_AXIS));
     protected com.codename1.ui.Label gui_phone_label = new com.codename1.ui.Label();

@@ -59,7 +59,7 @@ public class ProduitSingleForm extends Form {
 
     }
 
-////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_Label_6 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit = new com.codename1.ui.Button();
@@ -101,14 +101,15 @@ public class ProduitSingleForm extends Form {
         gui_Layered_Layout_2.setPreferredSizeStr("36.772488mm 58.73016mm");
                 gui_Layered_Layout_2.setInlineStylesTheme(resourceObjectInstance);
         gui_Layered_Layout_2.setName("Layered_Layout_2");
-        gui_catalogue.setPreferredSizeStr("22.486773mm inherit");
+        gui_catalogue.setPreferredSizeStr("24.867725mm 7.936508mm");
         gui_catalogue.setText("Catalogue");
                 gui_catalogue.setInlineStylesTheme(resourceObjectInstance);
-        gui_catalogue.setInlineAllStyles("font:3.0mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png; alignment:center;");
+        gui_catalogue.setInlineAllStyles("font:3.0mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:234; bgImage:; alignment:center;");
         gui_catalogue.setName("catalogue");
+        gui_ajouter.setPreferredSizeStr("26.455027mm 7.4074073mm");
         gui_ajouter.setText("Ajouter");
                 gui_ajouter.setInlineStylesTheme(resourceObjectInstance);
-        gui_ajouter.setInlineAllStyles("font:3.0mm; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; bgImage:Background.png;");
+        gui_ajouter.setInlineAllStyles("font:3.0mm; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:255; bgImage:;");
         gui_ajouter.setName("ajouter");
         gui_Label.setPreferredSizeStr("21.16402mm inherit");
         gui_Label.setText("Quantite:");
@@ -222,8 +223,8 @@ public class ProduitSingleForm extends Form {
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_2.getLayout()).setPreferredWidthMM((float)36.772488);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_2.getLayout()).setPreferredHeightMM((float)58.73016);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_2.getParent().getLayout()).setInsets(gui_Layered_Layout_2, "49.909584% auto 9.94575% -4.7619076mm").setReferenceComponents(gui_Layered_Layout_2, "-1 -1 -1 -1").setReferencePositions(gui_Layered_Layout_2, "0.0 0.0 0.0 0.0");
-        ((com.codename1.ui.layouts.LayeredLayout)gui_catalogue.getParent().getLayout()).setInsets(gui_catalogue, "0.0mm auto 6.084656mm 1.8518519mm").setReferenceComponents(gui_catalogue, "1 -1 -1 -1").setReferencePositions(gui_catalogue, "1.0 0.0 0.0 0.0");
-        ((com.codename1.ui.layouts.LayeredLayout)gui_ajouter.getParent().getLayout()).setInsets(gui_ajouter, "0.0mm 0.0mm 0.0mm 62.204727%").setReferenceComponents(gui_ajouter, "1 0 3 -1").setReferencePositions(gui_ajouter, "1.0 0.0 0.0 0.0");
+        ((com.codename1.ui.layouts.LayeredLayout)gui_catalogue.getParent().getLayout()).setInsets(gui_catalogue, "auto 56.64336% 4.4973545mm 6.878307mm").setReferenceComponents(gui_catalogue, "-1 -1 -1 2 ").setReferencePositions(gui_catalogue, "0.0 0.0 0.0 0.0");
+        ((com.codename1.ui.layouts.LayeredLayout)gui_ajouter.getParent().getLayout()).setInsets(gui_ajouter, "auto 2.3809524mm 4.4973545mm 30.246914%").setReferenceComponents(gui_ajouter, "-1 -1 -1 3 ").setReferencePositions(gui_ajouter, "0.0 0.0 0.0 1.0");
         ((com.codename1.ui.layouts.LayeredLayout)gui_Label.getParent().getLayout()).setInsets(gui_Label, "auto 37.30159mm 0.0mm auto").setReferenceComponents(gui_Label, "-1 -1 1 0 ").setReferencePositions(gui_Label, "0.0 0.0 1.0 0.0");
         ((com.codename1.ui.layouts.LayeredLayout)gui_quantite.getParent().getLayout()).setInsets(gui_quantite, "0.0mm 35.37415% 0.0mm 0.0mm").setReferenceComponents(gui_quantite, "0 -1 1 2 ").setReferencePositions(gui_quantite, "1.0 0.0 1.0 1.0");
     }// </editor-fold>
