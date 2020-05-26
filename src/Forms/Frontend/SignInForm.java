@@ -6,6 +6,7 @@
 package Forms.Frontend;
 
 import Forms.BaseForm;
+import Forms.Commande.ShopForm;
 import Services.User.UserService;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
@@ -56,7 +57,7 @@ public class SignInForm extends Form {
                     if (tmp.startsWith("Utilisateur existant")) {
 
                         if (Dialog.show("SUCCESS", tmp, "OK", null)) {
-                            new WalkthruForm(resourceObjectInstance).show();
+                            new ShopForm(resourceObjectInstance).show();
                         }
 
                     } else {
@@ -75,7 +76,7 @@ public class SignInForm extends Form {
 
    
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_Label = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_2 = new com.codename1.ui.Label();

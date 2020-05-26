@@ -45,7 +45,10 @@ public class WalkthruForm extends com.codename1.ui.Form {
 //        getTitleArea().setUIID("Container");
 
         setTransitionOutAnimator(CommonTransitions.createUncover(CommonTransitions.SLIDE_HORIZONTAL, true, 400));
-        this.getStyle().setBgColor(0x3C80F7);
+        //this.getStyle().setBgColor();
+
+        this.getAllStyles().setBgImage(res.getImage("Group 278.png"));
+
         Tabs walkthruTabs = new Tabs();
         walkthruTabs.setUIID("Container");
         walkthruTabs.getContentPane().setUIID("Container");
@@ -64,7 +67,9 @@ public class WalkthruForm extends com.codename1.ui.Form {
         SpanLabel Text1 = new SpanLabel("Never miss an appointment, never forget about your "
                 + "daily team meeting and remember when your favorite "
                 + "team is playing.", "WalkthruBody");
-        Text1.getStyle().setFgColor(0xFFFFFF);
+        //Text1.setUIID("Label");
+        Text1.getTextAllStyles().setFgColor(0xFFFFFF);
+
         Container tab1 = BorderLayout.centerAbsolute(BoxLayout.encloseY(
                 notesPlaceholder, new Label(""),
                 new Label(""),
@@ -75,7 +80,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
                 new Label(""),
                 new Label(""),
                 new Label(""),
-                new Label(""), 
+                new Label(""),
                 new Label(""),
                 new Label(""),
                 new Label(""),
@@ -122,6 +127,10 @@ public class WalkthruForm extends com.codename1.ui.Form {
 
         Component.setSameHeight(notesLabel2, notesPlaceholder2);
         Component.setSameWidth(notesLabel2, notesPlaceholder2);
+        SpanLabel Text2=new SpanLabel("Write once run anywhere native mobile development "
+                        + "Get Java working on all devices as it was always meant "
+                        + "to be!", "WalkthruBody");
+        Text2.getTextAllStyles().setFgColor(0xFFFFFF);
         Container tab2 = BorderLayout.centerAbsolute(BoxLayout.encloseY(
                 notesLabel2,
                 new Label(""),
@@ -165,18 +174,19 @@ public class WalkthruForm extends com.codename1.ui.Form {
                 new Label(""),
                 new Label(""),
                 new Label(""),
-                new SpanLabel("Write once run anywhere native mobile development "
-                        + "Get Java working on all devices as it was always meant "
-                        + "to be!", "WalkthruBody"),
+                Text2,
                 bottomSpaceTab2
         ));
 
         tab2.setUIID("WalkthruTab2");
         ScaleImageLabel notesLabel3 = new ScaleImageLabel(res.getImage("Phone Left 2.png"));
         walkthruTabs.addTab("", tab2);
+         SpanLabel Text3= new SpanLabel("Write once run anywhere native mobile development "
+                        + "Get Java working on all devices as it was always meant "
+                        + "to be!", "WalkthruBody");
+        Text3.getTextAllStyles().setFgColor(0xFFFFFF);
         Container tab3 = BorderLayout.centerAbsolute(BoxLayout.encloseY(
                 notesLabel3,
-               new Label(""),
                 new Label(""),
                 new Label(""),
                 new Label(""),
@@ -217,19 +227,18 @@ public class WalkthruForm extends com.codename1.ui.Form {
                 new Label(""),
                 new Label(""),
                 new Label(""),
-                new SpanLabel("Write once run anywhere native mobile development "
-                        + "Get Java working on all devices as it was always meant "
-                        + "to be!", "WalkthruBody"),
+                new Label(""),
+               Text3,
                 new Label("")
         ));
 
         tab3.setUIID("WalkthruTab3");
-         for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 20; i++) {
             this.add(new Label(" "));
         }
         walkthruTabs.addTab("", tab3);
         add(walkthruTabs);
-     
+
         ButtonGroup bg = new ButtonGroup();
         Image unselectedWalkthru = res.getImage("notselected.png");
         Image selectedWalkthru = res.getImage("checked.png");
@@ -253,7 +262,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
 
         Button skip = new Button(res.getImage("Button.png"));
         skip.setUIID("SkipButton");
-        skip.addActionListener(e -> new ShopForm(res).show());
+        skip.addActionListener(e -> new SignInForm(res).show());
         Container southLayout = BoxLayout.encloseX(
                 radioContainer,
                 new Label("                                      "),
@@ -273,7 +282,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
 
     }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Button gui_Button = new com.codename1.ui.Button();
 
 
@@ -283,7 +292,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
         setInlineStylesTheme(resourceObjectInstance);
         setScrollableY(false);
                 setInlineStylesTheme(resourceObjectInstance);
-        setInlineAllStyles("bgColor:1058d1; bgType:none; bgImage:null;");
+        setInlineAllStyles("transparency:255; bgImage:Group 278.png;");
         setTitle("WalkthruForm");
         setName("WalkthruForm");
         gui_Button.setText("SUIVANT");

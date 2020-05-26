@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:1058d1; bgType:none; bgImage:null;" title="WalkthruForm" scrollableY="false" name="WalkthruForm">
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="transparency:255; bgImage:Group 278.png;" title="WalkthruForm" scrollableY="false" name="WalkthruForm">
   <component type="Button" text="SUIVANT" name="Button">
     <layoutConstraint insets="auto 25.74627% 33.273056% auto" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>

@@ -115,8 +115,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="Calendar.Friday" value="Fri" />
             <entry key="select" value="Select" />
+            <entry key="Calendar.Friday" value="Fri" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -131,8 +131,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="select" value="Select" />
             <entry key="Calendar.Friday" value="Fri" />
+            <entry key="select" value="Select" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -675,7 +675,7 @@
         <font key="TitleCommand.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
         <val key="TitleCommand.padUnit" value="2,2,2,2" />
         <val key="TitleCommand.padding" value="1.0,1.0,1.0,1.0" />
-        <gradient key="Toolbar.bgGradient" color1="26367" color2="26367" posX="0.92" posY="0.21" radius="1.0" />
+        <gradient key="Toolbar.bgGradient" color1="3965175" color2="1071313" posX="0.92" posY="0.21" radius="1.0" />
         <val key="Toolbar.bgType" value="7" />
         <border key="Toolbar.border" type="empty" />
         <val key="Welcome.bgImage" value="welcome-background.jpg" />
