@@ -19,6 +19,7 @@
 package Forms;
 
 import Forms.Commande.AdresseForm;
+import Forms.Commande.ShopForm;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Form;
@@ -28,6 +29,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
 import Forms.Frontend.SignInForm;
+import Forms.Shop.Shop2Form;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
 import com.codename1.ui.Component;
@@ -38,6 +40,7 @@ import com.codename1.ui.Sheet;
 import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.LayeredLayout;
+import com.codename1.ui.layouts.Layout;
 import com.codename1.ui.list.DefaultListModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +51,21 @@ import java.util.List;
  * @author Shai Almog
  */
 public class BaseForm extends Form {
+
+    public BaseForm() {
+    }
+
+    public BaseForm(Layout contentPaneLayout) {
+        super(contentPaneLayout);
+    }
+
+    public BaseForm(String title) {
+        super(title);
+    }
+
+    public BaseForm(String title, Layout contentPaneLayout) {
+        super(title, contentPaneLayout);
+    }
 
     public void installSidemenu(Resources res, List<Button> list_button, List<Form> list_form) {
         Image selection = res.getImage("selection_in_sidemenu.png");
@@ -68,9 +86,9 @@ public class BaseForm extends Form {
             calendarImage = selection;
         }
 
-        Image statsImage = null;
-        if (isCurrentStats()) {
-            statsImage = selection;
+        Image shop_image = null;
+        if (is_current_shop()) {
+            shop_image = selection;
         }
 
         Button inboxButton = new Button("Inbox", inboxImage);
@@ -91,7 +109,7 @@ public class BaseForm extends Form {
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
         getToolbar().addCommandToSideMenu("Map", null, e -> {
         });
-        getToolbar().addCommandToSideMenu("Trending", statsImage, e -> new SignInForm(res).show());
+        getToolbar().addCommandToSideMenu("Shop", shop_image, e -> new Shop2Form().show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {
         });
 
@@ -155,7 +173,7 @@ public class BaseForm extends Form {
         return false;
     }
 
-    protected boolean isCurrentStats() {
+    protected boolean is_current_shop() {
         return false;
     }
 

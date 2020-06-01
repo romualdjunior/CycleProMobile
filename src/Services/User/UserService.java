@@ -51,7 +51,7 @@ public class UserService {
         return responseResult;
     }
     public String connection(String username,String password) {
-        String url = Statics.BASE_URL + "/connexionMobile/"+username+"/"+ password;
+        String url = Statics.BASE_URL + "connexionMobile/"+username+"/"+ password;
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -61,7 +61,7 @@ public class UserService {
                     String responseString=new String(request.getResponseData());
                     System.out.println(responseString);
                     System.out.println("manger");
-                    if (responseString.startsWith("\"existant\"")) {
+                    if (responseString.startsWith("{\"id\"")) {
                         tmp="Utilisateur existant";
                     }
                     else tmp= "Utilisateur non existant";

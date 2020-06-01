@@ -8,6 +8,7 @@ import Forms.Frontend.SignInForm;
 import Forms.Frontend.SplashForm;
 import Forms.Frontend.WalkthruForm;
 import Forms.Frontend.WalkthruForm;
+import Forms.Shop.Shop2Form;
 import static com.codename1.ui.CN.*;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
@@ -68,8 +69,10 @@ public class MyApplication {
         }
 
 //         new HomeForm().show();
-        SplashForm s = new SplashForm(theme);
-        s.show();
+//        SplashForm s = new SplashForm(theme);
+//        s.show();
+          Shop2Form s=new Shop2Form();
+          s.show();
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();
 
