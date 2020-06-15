@@ -37,11 +37,9 @@ public class PanierForm extends BaseForm {
         initGuiBuilderComponents(resourceObjectInstance);
         List<Button> list_button = new ArrayList<Button>();
         List<Form> list_form = new ArrayList<Form>();
-        list_button.add(new Button("manger"));
-        list_button.add(new Button("Boire"));
-
-        list_form.add(new SignInForm(resourceObjectInstance));
-        list_form.add(new WalkthruForm(resourceObjectInstance));
+        ChartDemosForm s= (ChartDemosForm) Storage.getInstance().readObject("Statistiques");
+        list_button.add(new Button("Statistiques"));
+        list_form.add(s.showChart(s.options[0]));
         installSidemenu(resourceObjectInstance, list_button, list_form);
 
         Container C = BoxLayout.encloseY();
@@ -106,7 +104,7 @@ public class PanierForm extends BaseForm {
 
     }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Button gui_catalogue = new com.codename1.ui.Button();
     protected com.codename1.ui.Button gui_commande = new com.codename1.ui.Button();
 

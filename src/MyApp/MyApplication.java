@@ -1,5 +1,9 @@
 package MyApp;
 
+import Forms.Commande.AdresseForm;
+import Forms.Commande.ChartDemosForm;
+import Forms.Commande.ConfirmationForm;
+import Forms.Commande.InboxForm;
 import Forms.Commande.PanierForm;
 import Forms.Frontend.HomeForm;
 import Forms.Commande.ProduitSingleForm;
@@ -21,6 +25,7 @@ import java.io.IOException;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.Storage;
+import com.codename1.messaging.Message;
 import static com.codename1.ui.ComponentSelector.$;
 import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
@@ -67,9 +72,11 @@ public class MyApplication {
             return;
         }
 
-//         new HomeForm().show();
-        SplashForm s = new SplashForm(theme);
+        SplashForm s = new SplashForm();
         s.show();
+//        ChartDemosForm s = new ChartDemosForm();
+//        s.showChart(s.options[0]).show();
+//        new ConfirmationForm().show();
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();
 

@@ -7,10 +7,12 @@ package Forms.Frontend;
 
 import Forms.BaseForm;
 import Forms.Commande.ShopForm;
+import Models.User.User;
 import Services.User.UserService;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
 import com.codename1.io.Log;
+import com.codename1.io.Storage;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
@@ -18,6 +20,7 @@ import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Sheet;
+import com.codename1.ui.TextField;
 import com.codename1.ui.animations.CommonTransitions;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.geom.Rectangle;
@@ -30,6 +33,10 @@ import com.codename1.ui.plaf.RoundBorder;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.codename1.ui.validation.Constraint;
+import com.codename1.ui.validation.Validator;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * GUI builder created Form
@@ -47,16 +54,20 @@ public class SignInForm extends Form {
 
     public SignInForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         initGuiBuilderComponents(resourceObjectInstance);
+        gui_password.setConstraint(TextField.PASSWORD);
         gui_login.addActionListener((evt) -> {
             if ((gui_username.getText().length() == 0) || (gui_password.getText().length() == 0)) {
                 Dialog.show("Alert", "Please fill all the fields", "OK", null);
             } else {
                 try {
                     tmp = new UserService().connection(gui_username.getText(), gui_password.getText());
-
                     if (tmp.startsWith("Utilisateur existant")) {
-
                         if (Dialog.show("SUCCESS", tmp, "OK", null)) {
+                            User user = new User();
+                            user = new UserService().getUser().get(0);
+                            Storage.getInstance().writeObject("User", user);
+                            Map<String, String> notifications = new HashMap<String, String>();
+                            Storage.getInstance().writeObject("Notifications", notifications);
                             new ShopForm(resourceObjectInstance).show();
                         }
 
@@ -69,14 +80,37 @@ public class SignInForm extends Form {
 
             }
         });
+        Validator val = new Validator();
+        Constraint password_constraint = new Constraint() {
+            String message = "";
+            int cmpt = 0;
+            public boolean isValid(Object value) {
+                String v = (String) value;
+                System.out.println("boire");
+                if (v.length() > 8) {
+                    cmpt++;
+                    message = "le mot de passe ne doit pas depasser huit caractères";
+                    gui_password.setUIID("TextFieldInvalid");
+                    if (cmpt == 1) {
+                        Dialog.show("ERROR", message, "OK", null);
+                    }
+                    System.out.println("manger");
+                    return false;
+                }
+                gui_password.setUIID("TextField");
+                return true;
+            }
 
-      
+            public String getDefaultFailMessage() {
+                return message;
+            }
+
+        };
+        val.addConstraint(gui_password, password_constraint);
 
     }
 
-   
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Label gui_Label = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Label gui_Label_2 = new com.codename1.ui.Label();
@@ -117,9 +151,11 @@ public class SignInForm extends Form {
         gui_Label_3.setName("Label_3");
         gui_username.setPreferredSizeStr("58.99471mm 9.259259mm");
         gui_username.setHint("Username");
+        gui_username.setUIID("TextField");
                 gui_username.setInlineStylesTheme(resourceObjectInstance);
         gui_username.setInlineAllStyles("border:roundRect stroke(0.2mm 42777777) +top-left +top-right +bottom-left +bottom-right 1.0mm;");
         gui_username.setName("username");
+        gui_username.setRows(1);
         gui_username.setHintIcon(com.codename1.ui.FontImage.createMaterial("\ue7fd".charAt(0), gui_username.getUnselectedStyle()));
         gui_password.setPreferredSizeStr("58.201057mm 10.8465605mm");
         gui_password.setHint("Password");
