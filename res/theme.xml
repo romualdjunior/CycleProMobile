@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="1.jpg"  />
+    <image name="2.jpg"  />
+    <image name="3.jpg"  />
+    <image name="4.jpg"  />
+    <image name="5.jpg"  />
+    <image name="6.jpg"  />
     <image name="6974122_preview.png"  />
+    <image name="7.jpg"  />
     <image name="audi.png"  />
     <image name="back-command.png" type="multi"  />
     <image name="background.jpg"  />
@@ -706,6 +713,9 @@
         <val key="WelcomeTitle.padding" value="1.0,1.0,1.0,1.0" />
         <val key="WelcomeTitle.transparency" value="0" />
         <val key="address_label.align" value="4" />
+        <font key="produit_nom.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
+        <val key="produit_prix.fgColor" value="fe7b37" />
+        <font key="produit_prix.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
         <val key="transparency" value="0" />
     </theme>
     <theme name="Theme2">

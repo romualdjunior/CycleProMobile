@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utils;
+package Forms.Shop;
+
+import Forms.BaseForm;
 
 /**
  *
- * @author aissa
+ * @author Yasmine
  */
-public class Statics {
+public class AccessoireForm extends BaseForm{
 
-    public static final String BASE_URL = "http://127.0.0.1:8000/commande";
+    public AccessoireForm() {
+    }
+    
 }

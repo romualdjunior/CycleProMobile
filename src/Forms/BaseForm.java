@@ -30,6 +30,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
 import Forms.Frontend.SignInForm;
+import Forms.Shop.Shop2Form;
 import Models.User.User;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
@@ -75,10 +76,11 @@ public class BaseForm extends Form {
             calendarImage = selection;
         }
 
-        Image statsImage = null;
-        if (isCurrentStats()) {
-            statsImage = selection;
+        Image shop_image = null;
+        if (is_current_shop()) {
+            shop_image = selection;
         }
+
 
         Map<String, String> notifications = (Map<String, String>) Storage.getInstance().readObject("Notifications");;
         int notifications_number = notifications.size();
@@ -101,7 +103,7 @@ public class BaseForm extends Form {
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
         getToolbar().addCommandToSideMenu("Map", null, e -> {
         });
-        getToolbar().addCommandToSideMenu("Trending", statsImage, e -> new SignInForm(res).show());
+        getToolbar().addCommandToSideMenu("Shop", shop_image, e -> new Shop2Form().show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {
         });
 
@@ -181,6 +183,9 @@ public class BaseForm extends Form {
     }
 
     protected boolean isCurrentStats() {
+        return false;
+    }
+      protected boolean is_current_shop() {
         return false;
     }
 

@@ -52,16 +52,7 @@ public class ShopForm extends BaseForm {
             this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
             new ProduitSingleForm(resourceObjectInstance).show();
         });
-        gui_produit_3.addActionListener((evt) -> {
-            String prix = gui_prix_3.getText();
-            String prix2 = prix.substring(1, 3);
-            System.out.println(prix2);
-            List<Panier> ProduitSingle = new ArrayList<Panier>();
-            ProduitSingle.add(new Panier(3, gui_produit_nom_3.getText(), Integer.parseInt(prix2), 0, gui_produit_3.getStyle().getBgImage(), 0));
-            Storage.getInstance().writeObject("ProduitSingle", ProduitSingle);
-            this.setTransitionInAnimator(CommonTransitions.createSlide(CommonTransitions.SLIDE_HORIZONTAL, true, 3000));
-            new ProduitSingleForm(resourceObjectInstance).show();
-        });
+       
         gui_produit_4.addActionListener((evt) -> {
             String prix = gui_prix_4.getText();
             String prix2 = prix.substring(1, 3);
@@ -95,7 +86,7 @@ public class ShopForm extends BaseForm {
 
     }
 
-////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();

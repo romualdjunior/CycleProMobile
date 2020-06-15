@@ -46,8 +46,9 @@ public class MyApplication {
         // use two network threads instead of one
         updateNetworkThreadCount(2);
 
-        //theme = UIManager.initFirstTheme("/theme");
-        theme = UIManager.initNamedTheme("/theme", "Theme1");
+        theme = UIManager.initFirstTheme("/theme");
+        //theme = UIManager.initNamedTheme("/theme", "Theme1");
+        System.out.println("ici"+theme);
 
         // Enable Toolbar on all Forms by default
         Toolbar.setGlobalToolbar(true);

@@ -59,7 +59,7 @@ public class ProduitSingleForm extends Form {
 
     }
 
-////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+//////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     protected com.codename1.ui.Label gui_Label_6 = new com.codename1.ui.Label();
     protected com.codename1.ui.Button gui_produit = new com.codename1.ui.Button();
