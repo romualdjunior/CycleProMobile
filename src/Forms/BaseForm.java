@@ -18,6 +18,7 @@
  */
 package Forms;
 
+import Forms.Blog.ReadArticles;
 import Forms.Commande.AdresseForm;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -62,6 +63,11 @@ public class BaseForm extends Form {
         if (is_current_adresse()) {
             image_adresse = selection;
         }
+         Image image_blog = null;
+        if (is_current_blog()) {
+            image_blog = selection;
+        }
+        
 
         Image calendarImage = null;
         if (isCurrentCalendar()) {
@@ -89,8 +95,7 @@ public class BaseForm extends Form {
 
         getToolbar().addCommandToSideMenu("Adresse", image_adresse, e -> new AdresseForm(res).show());
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
-        getToolbar().addCommandToSideMenu("Map", null, e -> {
-        });
+        getToolbar().addCommandToSideMenu("Blog", image_blog,e -> new ReadArticles(res).show());
         getToolbar().addCommandToSideMenu("Trending", statsImage, e -> new SignInForm(res).show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {
         });
@@ -148,6 +153,9 @@ public class BaseForm extends Form {
     }
 
     protected boolean is_current_adresse() {
+        return false;
+    }
+    protected boolean is_current_blog() {
         return false;
     }
 

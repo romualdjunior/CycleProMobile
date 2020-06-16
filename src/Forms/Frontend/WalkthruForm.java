@@ -283,7 +283,7 @@ public class WalkthruForm extends com.codename1.ui.Form {
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
-    protected com.codename1.ui.Button gui_Button = new com.codename1.ui.Button();
+    private com.codename1.ui.Button gui_Button = new com.codename1.ui.Button();
 
 
 // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -295,10 +295,12 @@ public class WalkthruForm extends com.codename1.ui.Form {
         setInlineAllStyles("transparency:255; bgImage:Group 278.png;");
         setTitle("WalkthruForm");
         setName("WalkthruForm");
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredWidthMM((float)70.899475);
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredHeightMM((float)146.2963);
+        addComponent(gui_Button);
         gui_Button.setText("SUIVANT");
                 gui_Button.setInlineStylesTheme(resourceObjectInstance);
         gui_Button.setName("Button");
-        addComponent(gui_Button);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Button.getParent().getLayout()).setInsets(gui_Button, "auto 25.74627% 33.273056% auto").setReferenceComponents(gui_Button, "-1 -1 -1 -1").setReferencePositions(gui_Button, "0.0 0.0 0.0 0.0");
     }// </editor-fold>
 

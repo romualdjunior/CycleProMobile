@@ -36,7 +36,7 @@ public class UserService {
     }
 
     public boolean addUser(User user) {
-        String url = Statics.BASE_URL + "/connexionMobile/users/" + user.getUsername() + "/" + user.getPassword();
+        String url = Statics.BASE_URL_NADA + "/connexionMobile/users/" + user.getUsername() + "/" + user.getPassword();
 
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -51,7 +51,7 @@ public class UserService {
         return responseResult;
     }
     public String connection(String username,String password) {
-        String url = Statics.BASE_URL + "/connexionMobile/"+username+"/"+ password;
+        String url = Statics.BASE_URL_NADA + "/connexionMobile/"+username+"/"+ password;
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -61,7 +61,7 @@ public class UserService {
                     String responseString=new String(request.getResponseData());
                     System.out.println(responseString);
                     System.out.println("manger");
-                    if (responseString.startsWith("\"existant\"")) {
+                        if (responseString.startsWith("{\"id\":")) {
                         tmp="Utilisateur existant";
                     }
                     else tmp= "Utilisateur non existant";
@@ -74,7 +74,7 @@ public class UserService {
     }
 
     public ArrayList<User> getAllTasks() {
-        String url = Statics.BASE_URL + "/tasks/";
+        String url = Statics.BASE_URL_NADA + "/tasks/";
 
         request.setUrl(url);
         request.setPost(false);
