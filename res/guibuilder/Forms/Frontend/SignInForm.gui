@@ -13,7 +13,7 @@
   <component type="Label" text="Ev&#xe8;nement,V&#xe9;lo" styles="font:4.0mm native:MainRegular native:MainRegular; bgColor:0; fgColor:0; opacity:219;" preferredSize="41.534393mm inherit" name="Label_3">
     <layoutConstraint insets="-0.7936508mm 34.552845% auto 0.0mm" referenceComponents="2 -1 -1 2 " referencePositions="1.0 0.0 0.0 0.0" />
   </component>
-  <component type="TextField" styles="border:roundRect stroke(0.2mm 42777777) +top-left +top-right +bottom-left +bottom-right 1.0mm;" preferredSize="58.99471mm 9.259259mm" hint="Username" hintIcon="fontImage:e7fd" name="username">
+  <component type="TextField" uiid="TextField" styles="border:roundRect stroke(0.2mm 42777777) +top-left +top-right +bottom-left +bottom-right 1.0mm;" preferredSize="58.99471mm 9.259259mm" hint="Username" hintIcon="fontImage:e7fd" rows="1" name="username">
     <layoutConstraint insets="auto 3.968254mm 30.018085% 0.0mm" referenceComponents="-1 -1 -1 2 " referencePositions="0.0 0.0 0.0 0.0" />
   </component>
   <component type="TextField" styles="border:roundRect stroke(0.2mm 42777777) +top-left +top-right +bottom-left +bottom-right 1.0mm;" preferredSize="58.201057mm 10.8465605mm" hint="Password" hintIcon="fontImage:e897" name="password">

@@ -3,43 +3,52 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Services.Commande;
+package Services.Blog;
 
-import Models.Commande.Adresse;
-import Models.User.User;
+import Models.Blog.CommentaireArticle;
 import Utils.DataSource;
 import Utils.Statics;
+import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
+import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.events.ActionListener;
+import java.io.IOException;
+import java.util.Map;
+
 
 /**
  *
- * @author toshiba
+ * @author asus
  */
-public class AdresseService {
-     private ConnectionRequest request;
-
+public class CommentService {
+    public ConnectionRequest request;
     private boolean responseResult;
-     public AdresseService() {
-        request = DataSource.getInstance().getRequest();
+
+    public CommentService(){
+            request = DataSource.getInstance().getRequest();
     }
-    public boolean addAdresse(Adresse adresse) {
-        String url = Statics.BASE_URL_NADA + "/ajoutAdresseMobile/" + adresse.getNom() + "/" + adresse.getPrenom()+"/"+adresse.getPhone()+"/"+adresse.getEmail()+"/"+adresse.getPays()+"/"+adresse.getVille()+"/"+adresse.getEtat()+"/"+adresse.getPincode()+"/"+adresse.getAdresseLivraison();
-        System.out.println(url);
+    
+    
+    public boolean AddComment(CommentaireArticle comt) {
+        String url = Statics.BASE_URL_NADA + "/ArticleUser/createCommentaire/" + comt.getArticle()
+                +"/" + comt.getUser()
+                + "/" + comt.getContenue();
+
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
                 responseResult = request.getResponseCode() == 200; // Code HTTP 200 OK
                 request.removeResponseListener(this);
-                System.out.println(new String("Données:"+request.getResponseData()));
             }
         });
         NetworkManager.getInstance().addToQueueAndWait(request);
 
         return responseResult;
     }
-    
+
 }
+    

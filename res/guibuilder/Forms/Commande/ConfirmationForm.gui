@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:fbfcfe;" title="ConfirmationForm" scrollableY="false" name="ConfirmationForm">
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="Y"  styles="bgImage:Mask.png; alignment:center; padding:7px 0px 10px 10px;" preferredSize="49.73545mm 56.878307mm" name="Box_Layout_Y">
+    <layoutConstraint insets="4.4973545mm 16.791046% 58.156357% 13.059702%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" uiid="address_label" text=" Adresse Livraison" styles="font:4.0mm native:MainBold native:MainBold; fgColor:fe7b37;" preferredSize="43.650795mm inherit" name="Label_3">
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="alignment:left; padding:0px 0px 0px 7px;" preferredSize="36.243385mm inherit" name="Box_Layout_X">
+      <component type="Label" text="Nom:     " styles="font:3.5mm native:MainBold native:MainBold;" name="Label">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="Nom">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="36.243385mm inherit" name="Box_Layout_X_1">
+      <component type="Label" text="Prenom:" styles="font:3.5mm native:MainBold native:MainBold;" name="prl">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="prenom	">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="36.243385mm inherit" name="Box_Layout_X_2">
+      <component type="Label" text="Phone:   " styles="font:3.5mm native:MainBold native:MainBold;" name="pl">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="phone">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="36.243385mm 8.730159mm" name="Box_Layout_X_4">
+      <component type="Label" text="Pays:     " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_5">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="Pays	">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="41.534393mm 5.820106mm" name="Box_Layout_X_5">
+      <component type="Label" text="Ville:      " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_6">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="Ville">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="36.243385mm 6.878307mm" name="Box_Layout_X_8">
+      <component type="Label" text="Adresse:" styles="font:3.5mm native:MainBold native:MainBold;" name="Label_9">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="adresse">
+      </component>
+    </component>
+  </component>
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="Y"  styles="bgImage:Mask.png; padding:7px 0px 10px 10px;" preferredSize="53.439156mm 55.555557mm" name="Box_Layout_Y_1">
+    <layoutConstraint insets="45.75045% 7.936508mm 22.60398% 0.0mm" referenceComponents="-1 -1 -1 0 " referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="     Total Panier" styles="font:4.0mm native:MainBold native:MainBold; fgColor:fe7b37;" preferredSize="43.650795mm inherit" name="Label_4">
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="45.502647mm inherit" name="Box_Layout_X_3">
+      <component type="Label" text="Sous_Total: " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_2">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="sous_total">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="41.534393mm inherit" name="Box_Layout_X_3">
+      <component type="Label" text="Shipping:	     " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_2">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="shipping">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="43.650795mm inherit" name="Box_Layout_X_3">
+      <component type="Label" text="TVA:   	          " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_2">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="tva">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="41.534393mm 5.820106mm" name="Box_Layout_X_6">
+      <component type="Label" text="-------------------------------------" styles="font:3.5mm native:MainBold native:MainBold; opacity:115;" name="Label_7">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  styles="padding:0px 0px 0px 7px;" preferredSize="42.592594mm 6.878307mm" name="Box_Layout_X_9">
+      <component type="Label" text="Total:           " styles="font:3.5mm native:MainBold native:MainBold;" name="Label_10">
+      </component>
+      <component type="Label" text="Romuald" styles="font:3.5mm;" name="total">
+      </component>
+    </component>
+  </component>
+  <component type="Button" text="Confirimer" styles="font:3.0mm native:MainLight native:MainLight; fgColor:ffffff; bgImage:Button_background.png;" name="confirmer">
+    <layoutConstraint insets="auto auto 10.669078% 35.44776%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+  </component>
+</component>

@@ -44,7 +44,7 @@ public class ProduitsListForm extends Form {
         
     
     ShopService shopService =new ShopService();
-         theme = UIManager.initNamedTheme("/theme", "Theme2"); 
+         theme = UIManager.initNamedTheme("/theme", "Theme1"); 
         
         this.setLayout(BoxLayout.y());
                 

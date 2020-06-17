@@ -18,7 +18,9 @@
  */
 package Forms;
 
+import Forms.Blog.ReadArticles;
 import Forms.Commande.AdresseForm;
+import Forms.Commande.InboxForm;
 import Forms.Commande.ShopForm;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -32,8 +34,10 @@ import Forms.Frontend.SignInForm;
 import Forms.Shop.FavoriesForm;
 import Forms.Shop.ProduitsListForm;
 import Forms.Shop.Shop2Form;
+import Models.User.User;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
+import com.codename1.io.Storage;
 import com.codename1.ui.Component;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
@@ -45,7 +49,9 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.layouts.Layout;
 import com.codename1.ui.list.DefaultListModel;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Utility methods common to forms e.g. for binding the side menu
@@ -53,21 +59,6 @@ import java.util.List;
  * @author Shai Almog
  */
 public class BaseForm extends Form {
-
-    public BaseForm() {
-    }
-
-    public BaseForm(Layout contentPaneLayout) {
-        super(contentPaneLayout);
-    }
-
-    public BaseForm(String title) {
-        super(title);
-    }
-
-    public BaseForm(String title, Layout contentPaneLayout) {
-        super(title, contentPaneLayout);
-    }
 
     public void installSidemenu(Resources res, List<Button> list_button, List<Form> list_form) {
         Image selection = res.getImage("selection_in_sidemenu.png");
@@ -82,6 +73,10 @@ public class BaseForm extends Form {
         if (is_current_adresse()) {
             image_adresse = selection;
         }
+         Image image_blog = null;
+            if (is_current_blog()) {
+                image_blog = selection;
+            }
 
         Image calendarImage = null;
         if (isCurrentCalendar()) {
@@ -93,27 +88,28 @@ public class BaseForm extends Form {
             shop_image = selection;
         }
 
+        Map<String, String> notifications = (Map<String, String>) Storage.getInstance().readObject("Notifications");;
+        int notifications_number = notifications.size();
+
         Button inboxButton = new Button("Inbox", inboxImage);
         inboxButton.setUIID("SideCommand");
         inboxButton.getAllStyles().setPaddingBottom(0);
         Container inbox = FlowLayout.encloseMiddle(inboxButton,
-                new Label("18", "SideCommandNumber"));
+                new Label(Integer.toString(notifications_number), "SideCommandNumber"));
         inbox.setLeadComponent(inboxButton);
         inbox.setUIID("SideCommand");
-        inboxButton.addActionListener(e -> new SignInForm(res).show());
+        inboxButton.addActionListener(e -> new InboxForm(res).show());
         Style style_toolbar = getToolbar().getAllStyles();
         style_toolbar.setBgColor(0x1058D1);
         style_toolbar.setBgTransparency(255);
 
-        getToolbar().addComponentToSideMenu(inbox); 
-        
-      
-       
-        
-        getToolbar().addCommandToSideMenu("Adresse", image_adresse, e -> new AdresseForm(res).show());
+
+        getToolbar().addComponentToSideMenu(inbox);
+
+        getToolbar().addCommandToSideMenu("Commande", image_adresse, e -> new ShopForm(res).show());
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
-        getToolbar().addCommandToSideMenu("Map", null, e -> {
-        });
+        getToolbar().addCommandToSideMenu("Blog", image_blog, e -> new ReadArticles(res).show());
+
         getToolbar().addCommandToSideMenu("Shop", shop_image, e -> new Shop2Form().show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {
         });
@@ -123,8 +119,8 @@ public class BaseForm extends Form {
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(res.getImage("profile_image.png"), "Container"));
-        getToolbar().addComponentToSideMenu(new Label("Romuald Motcheho", "SideCommandNoPad"));
-
+        User user = (User) Storage.getInstance().readObject("User");
+        getToolbar().addComponentToSideMenu(new Label(user.getUsername(), "SideCommandNoPad"));
         FloatingActionButton fab = FloatingActionButton.createFAB(FontImage.MATERIAL_ADD);
         fab.setUIID("FloatingActionButton");
 
@@ -168,6 +164,21 @@ public class BaseForm extends Form {
 
     }
 
+    public BaseForm() {
+    }
+
+    public BaseForm(Layout contentPaneLayout) {
+        super(contentPaneLayout);
+    }
+
+    public BaseForm(String title) {
+        super(title);
+    }
+
+    public BaseForm(String title, Layout contentPaneLayout) {
+        super(title, contentPaneLayout);
+    }
+
     protected boolean isCurrentInbox() {
         return false;
     }
@@ -180,11 +191,17 @@ public class BaseForm extends Form {
         return false;
     }
 
-    protected boolean is_current_shop() {
+    protected boolean isCurrentStats() {
         return false;
     }
 
-    private class MySheet extends Sheet {
+    protected boolean is_current_blog() {
+            return false;
+        }
+     protected boolean is_current_shop() {
+            return false;
+        }
+      private class MySheet extends Sheet {
 
         MySheet(Sheet parent, List<Button> list_button, List<Form> list_form) {
             super(parent, "My Sheet");
@@ -209,5 +226,6 @@ public class BaseForm extends Form {
             });
         }
     }
+        
 
-}
+    }

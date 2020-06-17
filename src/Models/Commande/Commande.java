@@ -64,12 +64,10 @@ public class Commande {
         return idAdresse;
     }
 
-    public Commande(int total, String etat, String date, int idUser, int idAdresse) {
+    public Commande(int total, String etat, int idUser) {
         this.total = total;
         this.etat = etat;
-        this.date = date;
         this.idUser = idUser;
-        this.idAdresse = idAdresse;
     }
 
     @Override

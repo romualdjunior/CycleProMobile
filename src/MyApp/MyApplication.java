@@ -1,5 +1,9 @@
 package MyApp;
 
+import Forms.Commande.AdresseForm;
+import Forms.Commande.ChartDemosForm;
+import Forms.Commande.ConfirmationForm;
+import Forms.Commande.InboxForm;
 import Forms.Commande.PanierForm;
 import Forms.Frontend.HomeForm;
 import Forms.Commande.ProduitSingleForm;
@@ -23,6 +27,7 @@ import java.io.IOException;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.Storage;
+import com.codename1.messaging.Message;
 import static com.codename1.ui.ComponentSelector.$;
 import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
@@ -43,8 +48,9 @@ public class MyApplication {
         // use two network threads instead of one
         updateNetworkThreadCount(2);
 
-        theme = UIManager.initFirstTheme("/theme");
+      
         theme = UIManager.initNamedTheme("/theme", "Theme1");
+
 
         // Enable Toolbar on all Forms by default
         Toolbar.setGlobalToolbar(true);
@@ -69,12 +75,13 @@ public class MyApplication {
             return;
         }
 
-         new HomeForm().show();
-//        SplashForm s = new SplashForm(theme);
-//        s.show();
-   Shop2Form s=new Shop2Form();
-          s.show();
+
           
+        SplashForm s = new SplashForm();
+        s.show();
+//        ChartDemosForm s = new ChartDemosForm();
+//        s.showChart(s.options[0]).show();
+//        new ConfirmationForm().show();
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();
 

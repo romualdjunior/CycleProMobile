@@ -24,23 +24,15 @@ public class ShopForm extends BaseForm {
         initGuiBuilderComponents(resourceObjectInstance);
         List<Button> list_button = new ArrayList<Button>();
         List<Form> list_form = new ArrayList<Form>();
-        list_button.add(new Button("manger"));
-        list_button.add(new Button("Boire"));
-
-        list_form.add(new SignInForm(resourceObjectInstance));
-        list_form.add(new AdresseForm(resourceObjectInstance));
+        ChartDemosForm s=new ChartDemosForm();
+        Storage.getInstance().writeObject("Statistiques",s );
+        list_button.add(new Button("Statistiques"));
+        list_form.add(s.showChart(s.options[0]));
 
         //list_form.add(new AdresseForm(resourceObjectInstance));
-        Storage.getInstance().writeObject("theme", resourceObjectInstance);
-
 
         installSidemenu(resourceObjectInstance, list_button, list_form);
 
-//          LocalNotification ln = new LocalNotification();
-//            ln.setId("LnMessage");
-//            ln.setAlertTitle("Welcome");
-//            ln.setAlertBody("Thanks for arriving!");
-//            Display.getInstance().scheduleLocalNotification(ln, 1000, LocalNotification.REPEAT_NONE);
         gui_produit_1.addActionListener((evt) -> {
             String prix = gui_prix_1.getText();
             String prix2 = prix.substring(1, 3);
@@ -94,7 +86,9 @@ public class ShopForm extends BaseForm {
 
     }
 
-////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+
+
+////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     private com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     private com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
     private com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();

@@ -43,7 +43,7 @@ public class ShopService {
    
 
     public ArrayList<Velo> getAllTasks() {
-        String url = Statics.BASE_URL + "stock/shopMobile";
+        String url = Statics.BASE_URL_YASMINE + "/stock/shopMobile";
 
         request.setUrl(url);
         request.setPost(false);
@@ -51,7 +51,7 @@ public class ShopService {
             @Override
             public void actionPerformed(NetworkEvent evt) {
                 velos = parseVelos(new String(request.getResponseData()));
-                System.out.println(velos);
+                System.out.println("Produits: "+velos);
                 request.removeResponseListener(this);
             }
         });

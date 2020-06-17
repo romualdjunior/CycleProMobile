@@ -52,7 +52,7 @@ public class SplashForm extends com.codename1.ui.Form {
         UITimer.timer(3000, false, this, () -> new WalkthruForm(resourceObjectInstance).show());
     }
 
-//////-- DON'T EDIT BELOW THIS LINE!!!
+////////-- DON'T EDIT BELOW THIS LINE!!!
     private com.codename1.ui.Container gui_Container_1 = new com.codename1.ui.Container(new com.codename1.ui.layouts.BoxLayout(com.codename1.ui.layouts.BoxLayout.Y_AXIS));
     private com.codename1.ui.Container gui_Container_2 = new com.codename1.ui.Container(new com.codename1.ui.layouts.FlowLayout());
     private com.codename1.components.InfiniteProgress gui_Infinite_Progress_1 = new com.codename1.components.InfiniteProgress();
