@@ -74,7 +74,7 @@ Resources res=UIManager.initNamedTheme("/theme", "Theme1");
         installSidemenu(resourceObjectInstance, listButton, list_form);
             }
     @Override
-      protected boolean is_current_adresse() {
+      protected boolean is_current_blog() {
         return true;
     }
 

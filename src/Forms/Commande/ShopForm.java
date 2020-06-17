@@ -24,21 +24,15 @@ public class ShopForm extends BaseForm {
         initGuiBuilderComponents(resourceObjectInstance);
         List<Button> list_button = new ArrayList<Button>();
         List<Form> list_form = new ArrayList<Form>();
-        list_button.add(new Button("manger"));
-        list_button.add(new Button("Boire"));
+        ChartDemosForm s=new ChartDemosForm();
+        Storage.getInstance().writeObject("Statistiques",s );
+        list_button.add(new Button("Statistiques"));
+        list_form.add(s.showChart(s.options[0]));
 
-        list_form.add(new SignInForm(resourceObjectInstance));
-        list_form.add(new AdresseForm(resourceObjectInstance));
-
-
+        //list_form.add(new AdresseForm(resourceObjectInstance));
 
         installSidemenu(resourceObjectInstance, list_button, list_form);
 
-//          LocalNotification ln = new LocalNotification();
-//            ln.setId("LnMessage");
-//            ln.setAlertTitle("Welcome");
-//            ln.setAlertBody("Thanks for arriving!");
-//            Display.getInstance().scheduleLocalNotification(ln, 1000, LocalNotification.REPEAT_NONE);
         gui_produit_1.addActionListener((evt) -> {
             String prix = gui_prix_1.getText();
             String prix2 = prix.substring(1, 3);
@@ -92,32 +86,39 @@ public class ShopForm extends BaseForm {
 
     }
 
-////////////////////-- DON'T EDIT BELOW THIS LINE!!!
-    private com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
-    private com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
-    private com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();
-    private com.codename1.ui.Label gui_prix_1 = new com.codename1.ui.Label();
-    private com.codename1.ui.Label gui_produit_nom_1 = new com.codename1.ui.Label();
-    private com.codename1.ui.Container gui_Layered_Layout_1 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
-    private com.codename1.ui.Label gui_Label_3 = new com.codename1.ui.Label();
-    private com.codename1.ui.Button gui_produit_2 = new com.codename1.ui.Button();
-    private com.codename1.ui.Label gui_prix_2 = new com.codename1.ui.Label();
-    private com.codename1.ui.Label gui_produit_nom_2 = new com.codename1.ui.Label();
-    private com.codename1.ui.Container gui_Layered_Layout_3 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
-    private com.codename1.ui.Label gui_Label_5 = new com.codename1.ui.Label();
-    private com.codename1.ui.Button gui_produit_5 = new com.codename1.ui.Button();
-    private com.codename1.ui.Label gui_prix_5 = new com.codename1.ui.Label();
-    private com.codename1.ui.Label gui_produit_nom_5 = new com.codename1.ui.Label();
-    private com.codename1.ui.Container gui_Layered_Layout_4 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
-    private com.codename1.ui.Label gui_Label_6 = new com.codename1.ui.Label();
-    private com.codename1.ui.Button gui_produit_4 = new com.codename1.ui.Button();
-    private com.codename1.ui.Label gui_prix_4 = new com.codename1.ui.Label();
-    private com.codename1.ui.Label gui_produit_nom_4 = new com.codename1.ui.Label();
-    private com.codename1.ui.Container gui_Layered_Layout_5 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
-    private com.codename1.ui.Label gui_Label_7 = new com.codename1.ui.Label();
-    private com.codename1.ui.Button gui_produit_6 = new com.codename1.ui.Button();
-    private com.codename1.ui.Label gui_prix_6 = new com.codename1.ui.Label();
-    private com.codename1.ui.Label gui_produit_nom_6 = new com.codename1.ui.Label();
+
+
+////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+    protected com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_1 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_1 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Container gui_Layered_Layout_1 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_Label_3 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_2 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_2 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_2 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Container gui_Layered_Layout_2 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_Label_4 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_3 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_3 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_3 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Container gui_Layered_Layout_3 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_Label_5 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_5 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_5 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_5 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Container gui_Layered_Layout_4 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_Label_6 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_4 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_4 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_4 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Container gui_Layered_Layout_5 = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
+    protected com.codename1.ui.Label gui_Label_7 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Button gui_produit_6 = new com.codename1.ui.Button();
+    protected com.codename1.ui.Label gui_prix_6 = new com.codename1.ui.Label();
+    protected com.codename1.ui.Label gui_produit_nom_6 = new com.codename1.ui.Label();
 
 
 // <editor-fold defaultstate="collapsed" desc="Generated Code">                          

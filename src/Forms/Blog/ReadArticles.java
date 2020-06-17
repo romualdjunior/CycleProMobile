@@ -79,7 +79,7 @@ public class ReadArticles extends BaseForm {
     }
 
     @Override
-    protected boolean is_current_adresse() {
+    protected boolean is_current_blog() {
         return true;
     }
 

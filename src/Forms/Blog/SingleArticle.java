@@ -12,11 +12,13 @@ import Models.Blog.Article;
 import Models.Blog.CommentaireArticle;
 import Models.Blog.FavoriArticle;
 import Models.Commande.Adresse;
+import Models.User.User;
 import Services.Blog.ArticleService;
 import Services.Blog.CommentService;
 import Services.Blog.FavoritService;
 import Services.Commande.AdresseService;
 import com.codename1.components.SpanLabel;
+import com.codename1.io.Storage;
 import com.codename1.messaging.Message;
 import com.codename1.ui.AutoCompleteTextField;
 import com.codename1.ui.Button;
@@ -69,7 +71,7 @@ Resources res=UIManager.initNamedTheme("/theme", "Theme1");
         installSidemenu(resourceObjectInstance, listButton, list_form);
            }
     @Override
-      protected boolean is_current_adresse() {
+      protected boolean is_current_blog() {
         return true;
     }
 
@@ -189,7 +191,8 @@ Resources res=UIManager.initNamedTheme("/theme", "Theme1");
        
                             btnaddComment.addActionListener((evt) -> {
                             if ((v.isValid())) {
-                            CommentaireArticle com = new CommentaireArticle(ar.getId(),1,comtxt.getText());
+                                User user=(User) Storage.getInstance().readObject("User");
+                            CommentaireArticle com = new CommentaireArticle(ar.getId(),user.getId(),comtxt.getText());
                             CommentService CS= new CommentService();        
                             Label C1=new Label();
                             C1.setText(comtxt.getText());

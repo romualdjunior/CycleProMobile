@@ -10,9 +10,11 @@ import Forms.Frontend.SignInForm;
 import Forms.Frontend.WalkthruForm;
 import Models.Blog.Article;
 import Models.Commande.Adresse;
+import Models.User.User;
 import Services.Blog.ArticleService;
 import Services.Blog.FavoritService;
 import Services.Commande.AdresseService;
+import com.codename1.io.Storage;
 import com.codename1.messaging.Message;
 import com.codename1.ui.AutoCompleteTextField;
 import com.codename1.ui.Button;
@@ -74,7 +76,7 @@ Resources res=UIManager.initNamedTheme("/theme", "Theme1");
         installSidemenu(resourceObjectInstance, listButton, list_form);
             }
     @Override
-      protected boolean is_current_adresse() {
+      protected boolean is_current_blog() {
         return true;
     }
 
@@ -88,8 +90,8 @@ Resources res=UIManager.initNamedTheme("/theme", "Theme1");
         setTitle("MES FAVORIS");
        
         FavoritService SF=new FavoritService();
-        int idUser=1;
-        ArrayList<Article> p = SF.getFavoritArticles(idUser);
+        User user=(User) Storage.getInstance().readObject("User");
+        ArrayList<Article> p = SF.getFavoritArticles(user.getId());
 
         
         ListModel<String> autoP = new DefaultListModel<>();

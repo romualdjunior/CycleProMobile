@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="1.jpg"  />
+    <image name="2.jpg"  />
+    <image name="3.jpg"  />
+    <image name="4.jpg"  />
+    <image name="5.jpg"  />
+    <image name="6.jpg"  />
     <image name="6974122_preview.png"  />
+    <image name="7.jpg"  />
     <image name="audi.png"  />
     <image name="back-command.png" type="multi"  />
     <image name="background.jpg"  />
@@ -68,6 +75,7 @@
     <image name="Group 278.png"  />
     <image name="Group 279.png"  />
     <image name="Group 280.png"  />
+    <image name="Group 282.png"  />
     <image name="GroupElement.borderBottom_1.png" type="multi"  />
     <image name="GroupElement.borderBottomL_1.png" type="multi"  />
     <image name="GroupElement.borderBottomR_1.png" type="multi"  />
@@ -115,8 +123,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="select" value="Select" />
             <entry key="Calendar.Friday" value="Fri" />
+            <entry key="select" value="Select" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -131,8 +139,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="Calendar.Friday" value="Fri" />
             <entry key="select" value="Select" />
+            <entry key="Calendar.Friday" value="Fri" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -146,6 +154,7 @@
     <image name="logo.png" type="multi"  />
     <image name="Mask.png"  />
     <image name="Mask2.png"  />
+    <image name="Mask3.png"  />
     <image name="Menu.borderBottom_2.png" type="multi"  />
     <image name="Menu.borderBottomL_2.png" type="multi"  />
     <image name="Menu.borderBottomR_2.png" type="multi"  />
@@ -417,7 +426,7 @@
         <val key="HugeWhileLabel.padding" value="1.0,1.0,1.0,0.0" />
         <val key="HugeWhileLabel.transparency" value="0" />
         <val key="InboxNumber.align" value="4" />
-        <border key="InboxNumber.border" type="round" roundBorderColor="7819843" opacity="255" strokeColor="0" strokeOpacity="255" strokeThickness="0.0" strokeMM="false" shadowSpread="10" shadowOpacity="0" shadowX="0.5" shadowY="0.5" shadowBlur="10.0" shadowMM="false" rectangle="true" />
+        <border key="InboxNumber.border" type="round" roundBorderColor="410837" opacity="255" strokeColor="0" strokeOpacity="255" strokeThickness="0.0" strokeMM="false" shadowSpread="10" shadowOpacity="0" shadowX="0.5" shadowY="0.5" shadowBlur="10.0" shadowMM="false" rectangle="true" />
         <val key="InboxNumber.fgColor" value="ffffff" />
         <font key="InboxNumber.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.0" />
         <val key="InboxNumber.marUnit" value="0,2,0,2" />
@@ -463,7 +472,7 @@
         <val key="Padding2.padUnit" value="2,2,2,2" />
         <val key="Padding2.padding" value="2.0,2.0,2.0,2.0" />
         <val key="Padding2.transparency" value="0" />
-        <val key="RedLabel.fgColor" value="e77c6e" />
+        <val key="RedLabel.fgColor" value="333333" />
         <font key="RedLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.0" />
         <val key="RedLabel.margin" value="0.0,0.0,0.0,0.0" />
         <val key="RedLabel.padUnit" value="0,2,0,2" />
@@ -488,7 +497,7 @@
         <val key="RedLabelRight.padUnit" value="0,2,0,2" />
         <val key="RedLabelRight.padding" value="0.0,0.0,1.0,1.0" />
         <val key="RedLabelRight.transparency" value="0" />
-        <val key="Separator.bgColor" value="4e606e" />
+        <val key="Separator.bgColor" value="0" />
         <val key="Separator.fgColor" value="0" />
         <val key="Separator.marUnit" value="0,2,0,0" />
         <val key="Separator.margin" value="0.0,0.0,5.0,0.0" />
@@ -594,7 +603,7 @@
         <val key="SlightlySmallerFontLabelLeft.padUnit" value="2,2,2,2" />
         <val key="SlightlySmallerFontLabelLeft.padding" value="1.0,1.0,1.0,1.0" />
         <val key="SlightlySmallerFontLabelLeft.transparency" value="0" />
-        <val key="SmallFontLabel.fgColor" value="6c7b8a" />
+        <val key="SmallFontLabel.fgColor" value="333333" />
         <font key="SmallFontLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="1.5" />
         <val key="SmallFontLabel.marUnit" value="0,2,0,2" />
         <val key="SmallFontLabel.margin" value="0.0,0.0,1.0,1.0" />
@@ -703,6 +712,10 @@
         <val key="WelcomeTitle.padUnit" value="2,2,2,2" />
         <val key="WelcomeTitle.padding" value="1.0,1.0,1.0,1.0" />
         <val key="WelcomeTitle.transparency" value="0" />
+        <val key="address_label.align" value="4" />
+        <font key="produit_nom.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
+        <val key="produit_prix.fgColor" value="fe7b37" />
+        <font key="produit_prix.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
         <val key="transparency" value="0" />
     </theme>
     <theme name="Theme2">

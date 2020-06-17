@@ -28,15 +28,15 @@ public class UserService {
     private ConnectionRequest request;
 
     private boolean responseResult;
-    public ArrayList<User> users;
-    public String tmp="pas de connexion avec le serveur distant";
+    public static ArrayList<User> users;
+    public String tmp = "pas de connexion avec le serveur distant";
 
     public UserService() {
         request = DataSource.getInstance().getRequest();
     }
 
     public boolean addUser(User user) {
-        String url = Statics.BASE_URL_NADA + "/connexionMobile/users/" + user.getUsername() + "/" + user.getPassword();
+        String url = Statics.BASE_URL + "/connexionMobile/users/" + user.getUsername() + "/" + user.getPassword();
 
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -50,21 +50,24 @@ public class UserService {
 
         return responseResult;
     }
-    public String connection(String username,String password) {
-        String url = Statics.BASE_URL_NADA + "/connexionMobile/"+username+"/"+ password;
+
+    public String connection(String username, String password) {
+        String url = Statics.BASE_URL_NADA + "/connexionMobile/" + username + "/" + password;
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
                 responseResult = request.getResponseCode() == 200; // Code HTTP 200 OK
-                if(responseResult){
-                    String responseString=new String(request.getResponseData());
-                    System.out.println(responseString);
-                    System.out.println("manger");
-                        if (responseString.startsWith("{\"id\":")) {
-                        tmp="Utilisateur existant";
+                if (responseResult) {
+                    String responseString = new String(request.getResponseData());
+                    if (responseString.startsWith("{\"id\":")) {
+                        tmp = "Utilisateur existant";
+                        System.out.println("responseString: " + responseString);
+                        users = parseUsers(new String(request.getResponseData()));
+
+                    } else {
+                        tmp = "Utilisateur non existant";
                     }
-                    else tmp= "Utilisateur non existant";
                 }
                 request.removeResponseListener(this);
             }
@@ -73,21 +76,8 @@ public class UserService {
         return tmp;
     }
 
-    public ArrayList<User> getAllTasks() {
-        String url = Statics.BASE_URL_NADA + "/tasks/";
-
-        request.setUrl(url);
-        request.setPost(false);
-        request.addResponseListener(new ActionListener<NetworkEvent>() {
-            @Override
-            public void actionPerformed(NetworkEvent evt) {
-                users = parseUsers(new String(request.getResponseData()));
-                request.removeResponseListener(this);
-            }
-        });
-        NetworkManager.getInstance().addToQueueAndWait(request);
-
-        return users;
+    public ArrayList<User> getUser() {
+        return this.users;
     }
 
     public ArrayList<User> parseUsers(String jsonText) {
@@ -98,14 +88,24 @@ public class UserService {
             Map<String, Object> tasksListJson = jp.parseJSON(new CharArrayReader(jsonText.toCharArray()));
 
             List<Map<String, Object>> list = (List<Map<String, Object>>) tasksListJson.get("root");
-            for (Map<String, Object> obj : list) {
-                int id = (int) Float.parseFloat(obj.get("id").toString());
-                String username = obj.get("username").toString();
-                String password = obj.get("password").toString();
+            System.out.println("tasksListJson: " + tasksListJson);
+            int id = 0;
+            String username = "", email = "";
+            for (Map.Entry<String, Object> entry : tasksListJson.entrySet()) {
+                if (entry.getKey().equals("id")) {
+                    id = (int)Float.parseFloat(entry.getValue().toString());
 
-                users.add(new User(id, username, password));
+                } else if (entry.getKey().equals("username")) {
+                    username = entry.getValue().toString();
+
+                } else if (entry.getKey().equals("email")) {
+                    email = entry.getValue().toString();
+
+                }
+
             }
 
+            users.add(new User(id, username, email));
         } catch (IOException ex) {
         }
 
