@@ -29,6 +29,8 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
 import Forms.Frontend.SignInForm;
+import Forms.Shop.FavoriesForm;
+import Forms.Shop.ProduitsListForm;
 import Forms.Shop.Shop2Form;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
@@ -103,8 +105,11 @@ public class BaseForm extends Form {
         style_toolbar.setBgColor(0x1058D1);
         style_toolbar.setBgTransparency(255);
 
-        getToolbar().addComponentToSideMenu(inbox);
-
+        getToolbar().addComponentToSideMenu(inbox); 
+        
+      
+       
+        
         getToolbar().addCommandToSideMenu("Adresse", image_adresse, e -> new AdresseForm(res).show());
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
         getToolbar().addCommandToSideMenu("Map", null, e -> {
@@ -112,6 +117,8 @@ public class BaseForm extends Form {
         getToolbar().addCommandToSideMenu("Shop", shop_image, e -> new Shop2Form().show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {
         });
+        getToolbar().addCommandToSideMenu("Favories", shop_image, e -> new FavoriesForm(this).show());
+        getToolbar().addCommandToSideMenu("Produits", shop_image, e -> new ProduitsListForm(this).show());
 
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));

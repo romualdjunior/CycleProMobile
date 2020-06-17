@@ -8,7 +8,10 @@ package Services.Shop;
 import Models.Shop.Velo;
 import Models.User.User;
 import Utils.DataSource;
+import Utils.SingletonDataBase;
 import Utils.Statics;
+import com.codename1.db.Cursor;
+import com.codename1.db.Row;
 import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
@@ -27,14 +30,17 @@ import java.util.Map;
 public class ShopService {
 
     private ConnectionRequest request;
+    public final SingletonDataBase db ;
 
     private boolean responseResult;
     public ArrayList<Velo> velos;
     public String tmp = "pas de connexion avec le serveur distant";
-
     public ShopService() {
         request = DataSource.getInstance().getRequest();
-    }
+                db =SingletonDataBase.getInstance();
+
+    } 
+   
 
     public ArrayList<Velo> getAllTasks() {
         String url = Statics.BASE_URL + "stock/shopMobile";
@@ -80,4 +86,63 @@ public class ShopService {
 
         return velos;
     }
+    
+     public void favProduit( Velo v){
+        try {
+            db.getBase().execute("Insert into fav (id , produit  , prix , image) values "
+                    + "("+v.getId()+", '" +v.getMarque()+"',"+v.getPrixAchat()+" ,'"+v.getPhotoV() +"') ");
+            
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        
+    }
+     
+      public void deleteFav(Velo p) throws IOException{
+
+        
+       db.getBase().execute("Delete from fav where id=" +p.getId());
+         }
+      
+        public void deleteFavAll() throws IOException{ 
+        
+        db.getBase().execute("Delete from fav" );
+        
+            }
+    public  List <Velo> getFavoris(){
+         
+       List<Velo> list= new ArrayList<Velo>();
+       
+       
+       
+       try {
+            Cursor c = db.getBase().executeQuery("Select * from fav");
+            
+            while (c.next()){
+                
+                Velo p = new Velo();
+                Row r = c.getRow();
+                
+                p.setId(r.getInteger(0));
+                p.setMarque(r.getString(1));
+               
+                p.setPrixAchat(r.getDouble(2));
+
+                p.setPhotoV(r.getString(3));
+
+                list.add(p);
+                
+                
+                
+            }
+            c.close();
+            
+        }catch(IOException ex){
+            
+            System.out.println(ex.getMessage());
+        }
+       
+       return list;
+}
 }

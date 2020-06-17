@@ -35,6 +35,15 @@ public class Velo {
     private String photoV3;
     private ImageView image;
 
+    public Velo(String marque, double prixAchat) {
+        this.marque = marque;
+        this.prixAchat = prixAchat;
+    }
+
+    public Velo(String marque) {
+        this.marque = marque;
+    }
+
     public Velo(int id, String marque, int qtEnStock, double prixAchat, String photoV, String photoV1, String photoV2) {
         this.id = id;
         this.marque = marque;

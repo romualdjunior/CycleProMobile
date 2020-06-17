@@ -9,6 +9,7 @@ import Forms.Frontend.SplashForm;
 import Forms.Frontend.WalkthruForm;
 import Forms.Frontend.WalkthruForm;
 import Forms.Shop.Shop2Form;
+import Forms.Shop.Shop3Form;
 import static com.codename1.ui.CN.*;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
@@ -42,7 +43,7 @@ public class MyApplication {
         // use two network threads instead of one
         updateNetworkThreadCount(2);
 
-        //theme = UIManager.initFirstTheme("/theme");
+        theme = UIManager.initFirstTheme("/theme");
         theme = UIManager.initNamedTheme("/theme", "Theme1");
 
         // Enable Toolbar on all Forms by default
@@ -68,11 +69,12 @@ public class MyApplication {
             return;
         }
 
-//         new HomeForm().show();
+         new HomeForm().show();
 //        SplashForm s = new SplashForm(theme);
 //        s.show();
-          Shop2Form s=new Shop2Form();
+   Shop2Form s=new Shop2Form();
           s.show();
+          
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();
 

@@ -39,15 +39,15 @@ public class Shop2Form extends BaseForm {
         installSidemenu(theme, list_button, list_form);
 
         List<Velo> velos = new ShopService().getAllTasks();
-        Container contenant = BoxLayout.encloseY();
+        Container contenant = new Container(BoxLayout.y());
         int i = 1;
         List<Velo> velos_2 = new ArrayList<Velo>();
         for (Velo velo : velos) {
             velos_2.add(velo);
-            if (i % 2 == 0) {
+            if (i % 2 == 0) {  
                 Container C = BoxLayout.encloseX();
                 Label produit_nom_1 = new Label(velos_2.get(0).getMarque());
-                Label produit_prix_1 = new Label(Double.toString(velos_2.get(0).getPrixAchat()) + "$");
+                Label produit_prix_1 = new Label(Double.toString(velos_2.get(0).getPrixAchat()) + "DT");
                 produit_nom_1.setUIID("produit_nom");
                 produit_prix_1.setUIID("produit_prix");
                 Container velo_1 = new Container();
@@ -57,17 +57,17 @@ public class Shop2Form extends BaseForm {
                 Container C1 = BoxLayout.encloseY(
                         velo_1,
                         produit_nom_1,
-                        produit_prix_1
-                );
+                        produit_prix_1 
+                ); 
                 C1.getAllStyles().setBgColor(0xFF0000);
                 C1.getStyle().setBgTransparency(255);
                 C1.getAllStyles().setMarginUnit(Style.UNIT_TYPE_DIPS);
-                C1.getAllStyles().setMargin(0, 3, 0, 3);
+                C1.getAllStyles().setMargin(0, 3, 0, 3); 
 
                 C1.getAllStyles().setBgImage(theme.getImage("Mask2.png"));
                 
                 Label produit_nom_2 = new Label(velos_2.get(1).getMarque());
-                Label produit_prix_2 = new Label(Double.toString(velos_2.get(1).getPrixAchat()) + "$");
+                Label produit_prix_2 = new Label(Double.toString(velos_2.get(1).getPrixAchat()) + "dt");
                 produit_nom_2.setUIID("produit_nom");
 
                 produit_prix_2.setUIID("produit_prix");
@@ -95,7 +95,7 @@ public class Shop2Form extends BaseForm {
             }
 
             i++;
-        }
+        }   
 
 //        getAllStyles().setBgColor(0xfbfcfe);
 //        C.getAllStyles().setMarginUnit(Style.UNIT_TYPE_DIPS);
@@ -104,6 +104,5 @@ public class Shop2Form extends BaseForm {
         contenant2.add(contenant);
         this.add(BorderLayout.CENTER, contenant2);
 
-    }
-
+    }  
 }
