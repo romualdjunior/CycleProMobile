@@ -36,9 +36,6 @@ private Resources theme;
         
 
     }
-    @Override
-      protected boolean is_current_accessoire() {
-        return true;
-    }
+    
     
 }

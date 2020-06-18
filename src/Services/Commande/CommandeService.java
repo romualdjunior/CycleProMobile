@@ -37,7 +37,7 @@ public class CommandeService {
     }
 
     public boolean addCommande(Commande commande) {
-        String url = Statics.BASE_URL + "/ajoutCommandeMobile/" + commande.getTotal() + "/" + commande.getEtat() + "/" + commande.getIdUser();
+        String url = Statics.BASE_URL_ROMUALD + "/ajoutCommandeMobile/" + commande.getTotal() + "/" + commande.getEtat() + "/" + commande.getIdUser();
         System.out.println(url);
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -54,7 +54,7 @@ public class CommandeService {
     }
 
     public double[] statistiques() {
-        String url = Statics.BASE_URL + "/afficherStatistiquesMobile";
+        String url = Statics.BASE_URL_ROMUALD + "/afficherStatistiquesMobile";
         request.setUrl(url);
         request.setPost(false);
         request.addResponseListener(new ActionListener<NetworkEvent>() {

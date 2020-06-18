@@ -41,7 +41,7 @@ public class PaiementService {
     }
 
     public boolean addPaiement(Adresse adresse) {
-        String url = Statics.BASE_URL + "/ajoutPaiement/" + adresse.getNom() + "/" + adresse.getPrenom() + "/" + adresse.getPhone() + "/" + adresse.getEmail() + "/" + adresse.getPays() + "/" + adresse.getVille() + "/" + adresse.getEtat() + "/" + adresse.getPincode() + "/" + adresse.getAdresseLivraison();
+        String url = Statics.BASE_URL_ROMUALD + "/ajoutPaiement/" + adresse.getNom() + "/" + adresse.getPrenom() + "/" + adresse.getPhone() + "/" + adresse.getEmail() + "/" + adresse.getPays() + "/" + adresse.getVille() + "/" + adresse.getEtat() + "/" + adresse.getPincode() + "/" + adresse.getAdresseLivraison();
         System.out.println(url);
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {
