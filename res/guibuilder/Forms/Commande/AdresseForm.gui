@@ -67,7 +67,7 @@
     <component type="TextField" name="prenom">
     </component>
   </component>
-  <component type="Button" text="Valider" styles="font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:ffffff; fgColor:ffffff; bgImage:Background.png;" preferredSize="24.074074mm inherit" name="valider">
+  <component type="Button" uiid="Button" text="Valider" styles="font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; transparency:255; bgImage:Button_background.png;" preferredSize="24.074074mm inherit" name="valider">
     <layoutConstraint insets="auto auto 4.232804mm 31.343285%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>
 </component>

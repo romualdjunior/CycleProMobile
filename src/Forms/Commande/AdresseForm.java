@@ -12,14 +12,20 @@ import Models.Commande.Adresse;
 import Services.Commande.AdresseService;
 import com.codename1.io.Storage;
 import com.codename1.messaging.Message;
+import com.codename1.notifications.LocalNotification;
 import com.codename1.ui.Button;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import com.codename1.ui.TextArea;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.codename1.ui.validation.LengthConstraint;
+import com.codename1.ui.validation.RegexConstraint;
+import com.codename1.ui.validation.Validator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * GUI builder created Form
@@ -37,25 +43,36 @@ public class AdresseForm extends BaseForm {
 
         List<Button> list_button = new ArrayList<Button>();
         List<Form> list_form = new ArrayList<Form>();
-        list_button.add(new Button("manger"));
-        list_button.add(new Button("Boire"));
-
-        list_form.add(new SignInForm(resourceObjectInstance));
-        list_form.add(new WalkthruForm(resourceObjectInstance));
+        ChartDemosForm s = (ChartDemosForm) Storage.getInstance().readObject("Statistiques");
+        list_button.add(new Button("Statistiques"));
+        list_form.add(s.showChart(s.options[0]));
 
         installSidemenu(resourceObjectInstance, list_button, list_form);
+
         gui_valider.addActionListener((evt) -> {
             if (gui_nom.getText().length() == 0 || gui_prenom.getText().length() == 0 || gui_phone.getText().length() == 0 || gui_email.getText().length() == 0 || gui_pays.getText().length() == 0 || gui_ville.getText().length() == 0 || gui_etat.getText().length() == 0 || gui_pincode.getText().length() == 0 || gui_adresse.getText().length() == 0) {
                 Dialog.show("Alert", "Please fill all the fields", "OK", null);
 
             } else {
                 try {
-                    if (new AdresseService().addAdresse(new Adresse(gui_nom.getText(), gui_prenom.getText(), Integer.parseInt(gui_phone.getText()), gui_email.getText(), gui_pays.getText(), gui_ville.getText(), gui_etat.getText(), Integer.parseInt(gui_pincode.getText()), gui_adresse.getText()))) {
+                    Adresse a = new Adresse(gui_nom.getText(), gui_prenom.getText(), Integer.parseInt(gui_phone.getText()), gui_email.getText(), gui_pays.getText(), gui_ville.getText(), gui_etat.getText(), Integer.parseInt(gui_pincode.getText()), gui_adresse.getText());
+
+                    if (new AdresseService().addAdresse(a)) {
+                        Storage.getInstance().writeObject("Adresse", a);
+                        Map<String, String> notifications = (Map<String, String>) Storage.getInstance().readObject("Notifications");
+                        notifications.put("Adresse", "Votre Adresse a été ajoutée avec succès");
+                        Storage.getInstance().writeObject("Notifications", notifications);
+                        LocalNotification ln = new LocalNotification();
+                        ln.setId("Adresse");
+                        ln.setAlertTitle("Adresse");
+                        ln.setAlertBody("Votre Adresse a été ajoutée avec succès!");
+                        Display.getInstance().scheduleLocalNotification(ln, System.currentTimeMillis(), LocalNotification.REPEAT_NONE);
                         if (Dialog.show("Alert", "Adresse ajoutée avec succès", "OK", null)) {
-                            Message m = new Message("Body of message");
-                            m.getAttachments().put("texte", "text/plain");
-                            m.getAttachments().put("image", "image/png");
-                            Display.getInstance().sendMessage(new String[]{"romuald.motchehokamguia@esprit.tn"}, "Subject of message", m);
+//                            Message m = new Message("Body of message");
+//                            m.getAttachments().put("texte", "text/plain");
+//                            m.getAttachments().put("image", "image/png");
+//                            Display.getInstance().sendMessage(new String[]{"romuald.motchehokamguia@esprit.tn"}, "Votre commande a été validée ", m);
+                            new ConfirmationForm(resourceObjectInstance).show();
                         }
 
                     } else {
@@ -66,13 +83,29 @@ public class AdresseForm extends BaseForm {
                 }
             }
         });
+
+        gui_email.setConstraint(TextArea.EMAILADDR);
+        gui_phone.setConstraint(TextArea.PHONENUMBER);
+        Validator v = new Validator();
+        String phone_regex = "^[1-9]+$";
+        String user_regex = "^[a-zA-Z0-9éèà]+$";
+        String code_postal_regex = "[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
+        v.addConstraint(gui_nom, new RegexConstraint(user_regex, "pas de caractères spéciaux")).
+                addConstraint(gui_prenom, new RegexConstraint(user_regex, "pas de caractères spéciaux")).
+                addConstraint(gui_pays, new RegexConstraint(user_regex, "pas de caractères spéciaux")).
+                addConstraint(gui_email, RegexConstraint.validEmail()).
+                addConstraint(gui_phone, new RegexConstraint(phone_regex, "uniquement des chiffres")).
+                addConstraint(gui_etat, new RegexConstraint(user_regex, "pas de caractères spéciaux")).
+                addConstraint(gui_pincode, new RegexConstraint(code_postal_regex, "6 chiffres uniquement"));
+        v.addSubmitButtons(gui_valider);
     }
+
     @Override
-      protected boolean is_current_adresse() {
+    protected boolean is_current_adresse() {
         return true;
     }
 
-//////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     private com.codename1.ui.Label gui_commande_image = new com.codename1.ui.Label();
     private com.codename1.ui.Container gui_Box_Layout_X = new com.codename1.ui.Container(new com.codename1.ui.layouts.BoxLayout(com.codename1.ui.layouts.BoxLayout.X_AXIS));
     private com.codename1.ui.Label gui_phone_label = new com.codename1.ui.Label();
@@ -268,8 +301,9 @@ public class AdresseForm extends BaseForm {
         ((com.codename1.ui.layouts.LayeredLayout)gui_Box_Layout_X_8.getParent().getLayout()).setInsets(gui_Box_Layout_X_8, "32.201973% 17.910444% auto 4.7619047mm").setReferenceComponents(gui_Box_Layout_X_8, "-1 -1 -1 -1").setReferencePositions(gui_Box_Layout_X_8, "0.0 0.0 0.0 0.0");
         gui_valider.setPreferredSizeStr("24.074074mm inherit");
         gui_valider.setText("Valider");
+        gui_valider.setUIID("Button");
                 gui_valider.setInlineStylesTheme(resourceObjectInstance);
-        gui_valider.setInlineAllStyles("font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:ffffff; fgColor:ffffff; bgImage:Background.png;");
+        gui_valider.setInlineAllStyles("font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; fgColor:ffffff; transparency:255; bgImage:Button_background.png;");
         gui_valider.setName("valider");
         ((com.codename1.ui.layouts.LayeredLayout)gui_valider.getParent().getLayout()).setInsets(gui_valider, "auto auto 4.232804mm 31.343285%").setReferenceComponents(gui_valider, "-1 -1 -1 -1").setReferencePositions(gui_valider, "0.0 0.0 0.0 0.0");
     }// </editor-fold>

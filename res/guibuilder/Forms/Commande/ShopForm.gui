@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="139.15344"  autolayout="true" styles="bgColor:fbfcfe;" title="Shop" scrollableY="false" name="Shop">
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.91197" layeredLayoutPreferredHeightMM="137.7668"  autolayout="true" styles="bgColor:fbfcfe;" title="Shop" scrollableY="false" name="Shop">
   <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="35.185184" layeredLayoutPreferredHeightMM="89.94709"  preferredSize="35.185184mm 89.94709mm" name="Layered_Layout">
     <layoutConstraint insets="-0.26455027mm 50.373135% 38.69801% 0.0mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
     <component type="Label" styles="bgImage:Mask.png;" preferredSize="34.126984mm 36.50794mm" name="label_1">
@@ -46,8 +46,8 @@
       <layoutConstraint insets="2.1164021mm auto auto 3.7037034mm" referenceComponents="1 -1 -1 1 " referencePositions="1.0 0.0 0.0 0.0" />
     </component>
   </component>
-  <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="35.714287" layeredLayoutPreferredHeightMM="78.57143"  preferredSize="35.714287mm 78.57143mm" name="Layered_Layout_4">
-    <layoutConstraint insets="29.46768% 0.0mm 14.2585535% 0.0mm" referenceComponents="-1 -1 -1 0 " referencePositions="0.0 0.0 0.0 1.0" />
+  <component type="Container" layout="LayeredLayout" layeredLayoutPreferredWidthMM="35.714287" layeredLayoutPreferredHeightMM="89.94709"  preferredSize="35.714287mm 89.94709mm" name="Layered_Layout_4">
+    <layoutConstraint insets="36.514374mm 0.0mm 16.757805mm 35.27959mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
     <component type="Label" styles="bgImage:Mask.png;" preferredSize="35.978836mm 36.50794mm" name="Label_6">
       <layoutConstraint insets="20.496895% 0.0mm -3.7037072mm 0.0mm" referenceComponents="-1 -1 2 -1" referencePositions="0.0 0.0 0.0 0.0" />
     </component>

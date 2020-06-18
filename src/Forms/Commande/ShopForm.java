@@ -24,23 +24,15 @@ public class ShopForm extends BaseForm {
         initGuiBuilderComponents(resourceObjectInstance);
         List<Button> list_button = new ArrayList<Button>();
         List<Form> list_form = new ArrayList<Form>();
-        list_button.add(new Button("manger"));
-        list_button.add(new Button("Boire"));
-
-        list_form.add(new SignInForm(resourceObjectInstance));
-        list_form.add(new AdresseForm(resourceObjectInstance));
+        ChartDemosForm s=new ChartDemosForm();
+        Storage.getInstance().writeObject("Statistiques",s );
+        list_button.add(new Button("Statistiques"));
+        list_form.add(s.showChart(s.options[0]));
 
         //list_form.add(new AdresseForm(resourceObjectInstance));
-        Storage.getInstance().writeObject("theme", resourceObjectInstance);
-
 
         installSidemenu(resourceObjectInstance, list_button, list_form);
 
-//          LocalNotification ln = new LocalNotification();
-//            ln.setId("LnMessage");
-//            ln.setAlertTitle("Welcome");
-//            ln.setAlertBody("Thanks for arriving!");
-//            Display.getInstance().scheduleLocalNotification(ln, 1000, LocalNotification.REPEAT_NONE);
         gui_produit_1.addActionListener((evt) -> {
             String prix = gui_prix_1.getText();
             String prix2 = prix.substring(1, 3);
@@ -94,7 +86,9 @@ public class ShopForm extends BaseForm {
 
     }
 
-////////////////////-- DON'T EDIT BELOW THIS LINE!!!
+
+
+////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
     private com.codename1.ui.Container gui_Layered_Layout = new com.codename1.ui.Container(new com.codename1.ui.layouts.LayeredLayout());
     private com.codename1.ui.Label gui_label_1 = new com.codename1.ui.Label();
     private com.codename1.ui.Button gui_produit_1 = new com.codename1.ui.Button();
@@ -131,8 +125,8 @@ public class ShopForm extends BaseForm {
         setInlineAllStyles("bgColor:fbfcfe;");
         setTitle("Shop");
         setName("Shop");
-        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredWidthMM((float)70.899475);
-        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredHeightMM((float)139.15344);
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredWidthMM((float)70.91197);
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredHeightMM((float)137.7668);
         addComponent(gui_Layered_Layout);
         gui_Layered_Layout.setPreferredSizeStr("35.185184mm 89.94709mm");
                 gui_Layered_Layout.setInlineStylesTheme(resourceObjectInstance);
@@ -230,12 +224,6 @@ public class ShopForm extends BaseForm {
         gui_produit_nom_5.setName("produit_nom_5");
         ((com.codename1.ui.layouts.LayeredLayout)gui_produit_nom_5.getParent().getLayout()).setInsets(gui_produit_nom_5, "2.1164021mm auto auto 3.7037034mm").setReferenceComponents(gui_produit_nom_5, "1 -1 -1 1 ").setReferencePositions(gui_produit_nom_5, "1.0 0.0 0.0 0.0");
         addComponent(gui_Layered_Layout_4);
-        gui_Layered_Layout_4.setPreferredSizeStr("35.714287mm 78.57143mm");
-                gui_Layered_Layout_4.setInlineStylesTheme(resourceObjectInstance);
-        gui_Layered_Layout_4.setName("Layered_Layout_4");
-        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredWidthMM((float)35.714287);
-        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredHeightMM((float)78.57143);
-        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getParent().getLayout()).setInsets(gui_Layered_Layout_4, "29.46768% 0.0mm 14.2585535% 0.0mm").setReferenceComponents(gui_Layered_Layout_4, "-1 -1 -1 0 ").setReferencePositions(gui_Layered_Layout_4, "0.0 0.0 0.0 1.0");
         gui_Layered_Layout_4.addComponent(gui_Label_6);
         gui_Layered_Layout_4.addComponent(gui_produit_4);
         gui_Layered_Layout_4.addComponent(gui_prix_4);
@@ -311,19 +299,26 @@ public class ShopForm extends BaseForm {
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_3.getLayout()).setPreferredWidthMM((float)36.50794);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_3.getLayout()).setPreferredHeightMM((float)89.68254);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_3.getParent().getLayout()).setInsets(gui_Layered_Layout_3, "54.082626% -1.3227501mm -22.486774mm 0.0mm").setReferenceComponents(gui_Layered_Layout_3, "-1 0 -1 0 ").setReferencePositions(gui_Layered_Layout_3, "0.0 0.0 0.0 0.0");
-        gui_Layered_Layout_4.setPreferredSizeStr("35.714287mm 78.57143mm");
+
+        gui_Layered_Layout_4.setPreferredSizeStr("35.714287mm 89.94709mm");
                 gui_Layered_Layout_4.setInlineStylesTheme(resourceObjectInstance);
         gui_Layered_Layout_4.setName("Layered_Layout_4");
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredWidthMM((float)35.714287);
-        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredHeightMM((float)78.57143);
-        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getParent().getLayout()).setInsets(gui_Layered_Layout_4, "29.46768% 0.0mm 14.2585535% 0.0mm").setReferenceComponents(gui_Layered_Layout_4, "-1 -1 -1 0 ").setReferencePositions(gui_Layered_Layout_4, "0.0 0.0 0.0 1.0");
+        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredHeightMM((float)89.94709);
+        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getParent().getLayout()).setInsets(gui_Layered_Layout_4, "36.514374mm 0.0mm 16.757805mm 35.27959mm").setReferenceComponents(gui_Layered_Layout_4, "-1 -1 -1 -1").setReferencePositions(gui_Layered_Layout_4, "0.0 0.0 0.0 0.0");
+                gui_Layered_Layout_4.setInlineStylesTheme(resourceObjectInstance);
+        gui_Layered_Layout_4.setName("Layered_Layout_4");
+        ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_4.getLayout()).setPreferredWidthMM((float)35.714287);
         gui_Layered_Layout_5.setPreferredSizeStr("35.714287mm 89.94709mm");
                 gui_Layered_Layout_5.setInlineStylesTheme(resourceObjectInstance);
         gui_Layered_Layout_5.setName("Layered_Layout_5");
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_5.getLayout()).setPreferredWidthMM((float)35.714287);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_5.getLayout()).setPreferredHeightMM((float)89.94709);
         ((com.codename1.ui.layouts.LayeredLayout)gui_Layered_Layout_5.getParent().getLayout()).setInsets(gui_Layered_Layout_5, "2.6455023mm 0.0mm -10px 0.0mm").setReferenceComponents(gui_Layered_Layout_5, "2 -1 -1 0 ").setReferencePositions(gui_Layered_Layout_5, "0.0 0.0 0.0 1.0");
+            gui_Layered_Layout_4.setPreferredSizeStr("35.714287mm 89.94709mm");
+
     }// </editor-fold>
 
 //-- DON'T EDIT ABOVE THIS LINE!!!
+    
 }

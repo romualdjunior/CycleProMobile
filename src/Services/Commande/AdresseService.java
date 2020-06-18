@@ -26,7 +26,7 @@ public class AdresseService {
         request = DataSource.getInstance().getRequest();
     }
     public boolean addAdresse(Adresse adresse) {
-        String url = Statics.BASE_URL + "/ajoutAdresseMobile/" + adresse.getNom() + "/" + adresse.getPrenom()+"/"+adresse.getPhone()+"/"+adresse.getEmail()+"/"+adresse.getPays()+"/"+adresse.getVille()+"/"+adresse.getEtat()+"/"+adresse.getPincode()+"/"+adresse.getAdresseLivraison();
+        String url = Statics.BASE_URL_NADA + "/ajoutAdresseMobile/" + adresse.getNom() + "/" + adresse.getPrenom()+"/"+adresse.getPhone()+"/"+adresse.getEmail()+"/"+adresse.getPays()+"/"+adresse.getVille()+"/"+adresse.getEtat()+"/"+adresse.getPincode()+"/"+adresse.getAdresseLivraison();
         System.out.println(url);
         request.setUrl(url);
         request.addResponseListener(new ActionListener<NetworkEvent>() {

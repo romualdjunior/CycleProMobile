@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="1.jpg"  />
+    <image name="2.jpg"  />
+    <image name="3.jpg"  />
+    <image name="4.jpg"  />
+    <image name="5.jpg"  />
+    <image name="6.jpg"  />
     <image name="6974122_preview.png"  />
+    <image name="7.jpg"  />
     <image name="audi.png"  />
     <image name="back-command.png" type="multi"  />
     <image name="background.jpg"  />
@@ -70,6 +77,7 @@
     <image name="Group 278.png"  />
     <image name="Group 279.png"  />
     <image name="Group 280.png"  />
+    <image name="Group 282.png"  />
     <image name="GroupElement.borderBottom_1.png" type="multi"  />
     <image name="GroupElement.borderBottomL_1.png" type="multi"  />
     <image name="GroupElement.borderBottomR_1.png" type="multi"  />
@@ -148,6 +156,7 @@
     <image name="logo.png" type="multi"  />
     <image name="Mask.png"  />
     <image name="Mask2.png"  />
+    <image name="Mask3.png"  />
     <image name="Menu.borderBottom_2.png" type="multi"  />
     <image name="Menu.borderBottomL_2.png" type="multi"  />
     <image name="Menu.borderBottomR_2.png" type="multi"  />
@@ -419,7 +428,7 @@
         <val key="HugeWhileLabel.padding" value="1.0,1.0,1.0,0.0" />
         <val key="HugeWhileLabel.transparency" value="0" />
         <val key="InboxNumber.align" value="4" />
-        <border key="InboxNumber.border" type="round" roundBorderColor="7819843" opacity="255" strokeColor="0" strokeOpacity="255" strokeThickness="0.0" strokeMM="false" shadowSpread="10" shadowOpacity="0" shadowX="0.5" shadowY="0.5" shadowBlur="10.0" shadowMM="false" rectangle="true" />
+        <border key="InboxNumber.border" type="round" roundBorderColor="410837" opacity="255" strokeColor="0" strokeOpacity="255" strokeThickness="0.0" strokeMM="false" shadowSpread="10" shadowOpacity="0" shadowX="0.5" shadowY="0.5" shadowBlur="10.0" shadowMM="false" rectangle="true" />
         <val key="InboxNumber.fgColor" value="ffffff" />
         <font key="InboxNumber.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.0" />
         <val key="InboxNumber.marUnit" value="0,2,0,2" />
@@ -465,7 +474,7 @@
         <val key="Padding2.padUnit" value="2,2,2,2" />
         <val key="Padding2.padding" value="2.0,2.0,2.0,2.0" />
         <val key="Padding2.transparency" value="0" />
-        <val key="RedLabel.fgColor" value="e77c6e" />
+        <val key="RedLabel.fgColor" value="333333" />
         <font key="RedLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.0" />
         <val key="RedLabel.margin" value="0.0,0.0,0.0,0.0" />
         <val key="RedLabel.padUnit" value="0,2,0,2" />
@@ -490,7 +499,7 @@
         <val key="RedLabelRight.padUnit" value="0,2,0,2" />
         <val key="RedLabelRight.padding" value="0.0,0.0,1.0,1.0" />
         <val key="RedLabelRight.transparency" value="0" />
-        <val key="Separator.bgColor" value="4e606e" />
+        <val key="Separator.bgColor" value="0" />
         <val key="Separator.fgColor" value="0" />
         <val key="Separator.marUnit" value="0,2,0,0" />
         <val key="Separator.margin" value="0.0,0.0,5.0,0.0" />
@@ -596,7 +605,7 @@
         <val key="SlightlySmallerFontLabelLeft.padUnit" value="2,2,2,2" />
         <val key="SlightlySmallerFontLabelLeft.padding" value="1.0,1.0,1.0,1.0" />
         <val key="SlightlySmallerFontLabelLeft.transparency" value="0" />
-        <val key="SmallFontLabel.fgColor" value="6c7b8a" />
+        <val key="SmallFontLabel.fgColor" value="333333" />
         <font key="SmallFontLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="1.5" />
         <val key="SmallFontLabel.marUnit" value="0,2,0,2" />
         <val key="SmallFontLabel.margin" value="0.0,0.0,1.0,1.0" />
@@ -705,6 +714,10 @@
         <val key="WelcomeTitle.padUnit" value="2,2,2,2" />
         <val key="WelcomeTitle.padding" value="1.0,1.0,1.0,1.0" />
         <val key="WelcomeTitle.transparency" value="0" />
+        <val key="address_label.align" value="4" />
+        <font key="produit_nom.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
+        <val key="produit_prix.fgColor" value="fe7b37" />
+        <font key="produit_prix.font" type="ttf" face="0" style="1" size="8" name="native:MainBold" family="native:MainBold" sizeSettings="0" actualSize="12.0" />
         <val key="transparency" value="0" />
     </theme>
     <theme name="Theme2">
@@ -748,9 +761,9 @@
         <val key="@switchOnImage" value="switch_on.png" />
         <val key="@tabPlacementInt" value="0" />
         <val key="Button.align" value="4" />
-        <gradient key="Button.bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
-        <val key="Button.bgType" value="0" />
-        <border key="Button.border" type="image" i1="OKGR.borderTop_1.png" i2="OKGR.borderBottom_1.png" i3="OKGR.borderLeft_1.png" i4="OKGR.borderRight_1.png" i5="OKGR.borderTopL_1.png" i6="OKGR.borderTopR_1.png" i7="OKGR.borderBottomL_1.png" i8="OKGR.borderBottomR_1.png" i9="OKGR.borderCenter_1.png" />
+        <val key="Button.bgColor" value="3399ff" />
+        <gradient key="Button.bgGradient" color1="16750899" color2="3381759" posX="0.0" posY="0.0" radius="0.0" />
+        <val key="Button.bgType" value="8" />
         <val key="Button.dis#align" value="4" />
         <gradient key="Button.dis#bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.dis#bgType" value="0" />
@@ -763,7 +776,7 @@
         <val key="Button.dis#padding" value="1.0,1.0,1.0,1.0" />
         <val key="Button.dis#transparency" value="0" />
         <val key="Button.fgColor" value="ffffff" />
-        <font key="Button.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <font key="Button.font" type="ttf" face="0" style="0" size="8" name="native:MainRegular" family="native:MainRegular" sizeSettings="0" actualSize="0.5" />
         <val key="Button.marUnit" value="2,2,2,2" />
         <val key="Button.margin" value="1.0,1.0,1.0,1.0" />
         <val key="Button.padUnit" value="2,2,2,2" />
@@ -1054,7 +1067,8 @@
         <val key="Form.transparency" value="255" />
         <val key="ImageViewer.margin" value="0.0,0.0,0.0,0.0" />
         <val key="ImageViewer.padding" value="0.0,0.0,0.0,0.0" />
-        <val key="Label.fgColor" value="0" />
+        <val key="Label.bgColor" value="ff9933" />
+        <val key="Label.fgColor" value="ff6633" />
         <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
         <border key="Label.press#border" type="empty" />
         <val key="Label.press#fgColor" value="ffffff" />
@@ -1434,6 +1448,7 @@
         <border key="border" type="empty" />
         <val key="fgColor" value="0" />
         <font key="font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="lprix.sel#fgColor" value="ff9900" />
         <border key="press#border" type="empty" />
         <border key="sel#border" type="empty" />
         <val key="transparency" value="0" />
