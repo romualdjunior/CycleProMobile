@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="146.2963"  autolayout="true" styles="bgColor:fbfcfe;" title="CommandeForm" scrollableY="true" name="CommandeForm">
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="139.15344"  autolayout="true" styles="bgColor:fbfcfe;" title="CommandeForm" scrollableY="true" name="CommandeForm">
   <component type="Label" styles="bgImage:6974122_preview.png;" preferredSize="28.571428mm 25.396826mm" name="commande_image">
     <layoutConstraint insets="1.5873017mm auto auto 28.35821%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
   </component>

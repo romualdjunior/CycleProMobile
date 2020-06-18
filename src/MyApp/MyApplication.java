@@ -8,6 +8,7 @@ import Forms.Frontend.SignInForm;
 import Forms.Frontend.SplashForm;
 import Forms.Frontend.WalkthruForm;
 import Forms.Frontend.WalkthruForm;
+import Forms.Reclamation.AddReclamationForm_1;
 import static com.codename1.ui.CN.*;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
@@ -66,9 +67,9 @@ public class MyApplication {
             current.show();
             return;
         }
-
-//         new HomeForm().show();
-        SplashForm s = new SplashForm(theme);
+         // new AddReclamationForm_1().show(); 
+         //new HomeForm().show();
+      SplashForm s = new SplashForm(theme);
         s.show();
 //                new ProduitSingleForm(theme).show();
 //       new PanierForm().show();

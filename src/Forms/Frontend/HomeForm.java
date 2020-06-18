@@ -53,7 +53,7 @@ public class HomeForm extends com.codename1.ui.Form {
     }
 
 ////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
-    protected com.codename1.ui.Label gui_logo_gif = new com.codename1.ui.Label();
+    private com.codename1.ui.Label gui_logo_gif = new com.codename1.ui.Label();
 
 
 // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -65,10 +65,12 @@ public class HomeForm extends com.codename1.ui.Form {
         setInlineAllStyles("bgImage:Group 278.png;");
         setTitle("HomeForm");
         setName("HomeForm");
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredWidthMM((float)70.899475);
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredHeightMM((float)146.2963);
+        addComponent(gui_logo_gif);
         gui_logo_gif.setPreferredSizeStr("inherit 119.84127mm");
                 gui_logo_gif.setInlineStylesTheme(resourceObjectInstance);
         gui_logo_gif.setName("logo_gif");
-        addComponent(gui_logo_gif);
         ((com.codename1.ui.layouts.LayeredLayout)gui_logo_gif.getParent().getLayout()).setInsets(gui_logo_gif, "0px 0px 0px 0px").setReferenceComponents(gui_logo_gif, "-1 -1 -1 -1").setReferencePositions(gui_logo_gif, "0.0 0.0 0.0 0.0");
     }// </editor-fold>
 

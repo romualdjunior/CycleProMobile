@@ -18,6 +18,7 @@
  */
 package Forms;
 
+import Forms.Accessoire.Accessoire1;
 import Forms.Commande.AdresseForm;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -28,6 +29,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
 import Forms.Frontend.SignInForm;
+import Forms.Reclamation.AddReclamationForm_1;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.RadioButtonList;
 import com.codename1.ui.Component;
@@ -68,9 +70,9 @@ public class BaseForm extends Form {
             calendarImage = selection;
         }
 
-        Image statsImage = null;
+        Image image_accessoire = null;
         if (isCurrentStats()) {
-            statsImage = selection;
+            image_accessoire = selection;
         }
 
         Button inboxButton = new Button("Inbox", inboxImage);
@@ -91,14 +93,14 @@ public class BaseForm extends Form {
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new SignInForm(res).show());
         getToolbar().addCommandToSideMenu("Map", null, e -> {
         });
-        getToolbar().addCommandToSideMenu("Trending", statsImage, e -> new SignInForm(res).show());
-        getToolbar().addCommandToSideMenu("Settings", null, e -> {
+        getToolbar().addCommandToSideMenu("Accessoires", image_accessoire, e -> new SignInForm(res).show());
+        getToolbar().addCommandToSideMenu("Reclamation", null, e -> { new AddReclamationForm_1().show() ; 
         });
 
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(res.getImage("profile_image.png"), "Container"));
-        getToolbar().addComponentToSideMenu(new Label("Romuald Motcheho", "SideCommandNoPad"));
+        getToolbar().addComponentToSideMenu(new Label("Wiem Saddem", "SideCommandNoPad"));
 
         FloatingActionButton fab = FloatingActionButton.createFAB(FontImage.MATERIAL_ADD);
         fab.setUIID("FloatingActionButton");
@@ -151,11 +153,19 @@ public class BaseForm extends Form {
         return false;
     }
 
-    protected boolean isCurrentCalendar() {
+    protected boolean is_current_accessoire() {
         return false;
     }
 
     protected boolean isCurrentStats() {
+        return false;
+    }
+
+     protected boolean isCurrentCalendar() {
+        return false;
+    }
+     
+     protected boolean isCurrent_Reclamation() {
         return false;
     }
 

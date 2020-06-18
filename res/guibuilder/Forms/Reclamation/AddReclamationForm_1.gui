@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="70.899475" layeredLayoutPreferredHeightMM="139.15344"  autolayout="true" title="AddReclamationForm_1" scrollableY="false" name="AddReclamationForm_1">
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="Y"  preferredSize="54.761906mm 137.56613mm" name="Box_Layout_Y">
+    <layoutConstraint insets="auto auto -3.4391532mm 5.5555553mm" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="76.98413mm 11.640212mm" name="Box_Layout_X1">
+      <component type="Label" text="Id:" preferredSize="17.989418mm inherit" name="Id_Label">
+      </component>
+      <component type="TextField" preferredSize="61.904762mm 5.291005mm" name="Id_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="77.24868mm 10.31746mm" name="Box_Layout_X2">
+      <component type="Label" text="Nom:" preferredSize="17.460318mm inherit" name="Nom_Label">
+      </component>
+      <component type="TextField" name="Nom_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="77.24868mm 10.05291mm" name="Box_Layout_X3">
+      <component type="Label" text="Prenom:" preferredSize="17.724869mm inherit" name="Prenom_Label">
+      </component>
+      <component type="TextField" name="Prenom_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="78.04233mm 10.05291mm" name="Box_Layout_X4">
+      <component type="Label" text="Tel:" preferredSize="17.460318mm inherit" name="Tel_Label">
+      </component>
+      <component type="TextField" rows="1" name="Tel_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="86.507935mm 10.05291mm" name="Box_Layout_X5">
+      <component type="Label" text="Adresse:" preferredSize="17.195766mm inherit" name="Adresse_Label">
+      </component>
+      <component type="TextField" preferredSize="inherit 6.6137567mm" rows="1" name="Adresse_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="74.07407mm 9.78836mm" name="Box_Layout_X6">
+      <component type="Label" text="Date :" preferredSize="16.666666mm 7.142857mm" name="Date_Label">
+      </component>
+      <component type="Picker" text="...." preferredSize="70.899475mm inherit" icon="fontImage:e916" pickerType="4" name="Picker" actionEvent="true">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="72.22222mm 9.523809mm" name="Box_Layout_X7">
+      <component type="Label" text="Raison: " preferredSize="16.931217mm inherit" name="Raison_Label">
+      </component>
+      <component type="TextField" name="Raison_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="70.899475mm 9.78836mm" name="Box_Layout_X8">
+      <component type="Label" text="D&#xe9;tails:" preferredSize="16.402117mm inherit" name="Details_Labe">
+      </component>
+      <component type="TextField" rows="1" name="Details_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="79.62963mm 9.259259mm" name="Box_Layout_X9">
+      <component type="Label" text="Ref:" preferredSize="15.608466mm inherit" name="RefVelo_Label">
+      </component>
+      <component type="TextField" rows="1" name="RefVelo_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="inherit 9.259259mm" name="Box_Layout_X10">
+      <component type="Label" text="Id client:" preferredSize="15.873016mm inherit" name="IdClient_Label">
+      </component>
+      <component type="TextField" name="IdClient_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="75.92593mm 8.730159mm" name="Box_Layout_X11">
+      <component type="Label" text="Email:" preferredSize="15.608466mm inherit" name="Email_Label">
+      </component>
+      <component type="TextField" rows="1" name="Email_Field">
+      </component>
+    </component>
+    <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  preferredSize="inherit 7.142857mm" name="Box_Layout_X12">
+      <component type="Label" text="Type" preferredSize="16.402117mm inherit" name="Type_Label">
+      </component>
+      <component type="ComboBox" preferredSize="61.11111mm 8.730159mm" name="Combo_Box_Type">
+            <stringItem value="Produit" /><stringItem value="Prix" /><stringItem value="Service" />      </component>
+    </component>
+    <component type="Button" text="Envoyer" icon="fontImage:e163" name="Send_Button">
+    </component>
+  </component>
+</component>

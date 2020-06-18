@@ -61,7 +61,7 @@ public class UserService {
                     String responseString=new String(request.getResponseData());
                     System.out.println(responseString);
                     System.out.println("manger");
-                    if (responseString.startsWith("\"existant\"")) {
+                     if (responseString.startsWith("{\"id\":")) {
                         tmp="Utilisateur existant";
                     }
                     else tmp= "Utilisateur non existant";

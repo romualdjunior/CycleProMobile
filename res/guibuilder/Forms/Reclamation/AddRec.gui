@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" layout="LayeredLayout" layeredLayoutPreferredWidthMM="0.0" layeredLayoutPreferredHeightMM="0.0"  autolayout="true" title="AddRec" scrollableY="true" name="AddRec">
+  <component type="Container" layout="BoxLayout" boxLayoutAxis="X"  name="Box_Layout_X">
+    <layoutConstraint insets="34.60076% 31.284916% auto 18.715084%" referenceComponents="-1 -1 -1 -1" referencePositions="0.0 0.0 0.0 0.0" />
+    <component type="Label" text="Search:" name="Label">
+    </component>
+    <component type="TextField" name="TextField">
+    </component>
+    <component type="Button" text="Submit" name="Button">
+    </component>
+  </component>
+</component>

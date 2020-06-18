@@ -107,8 +107,8 @@ public class PanierForm extends BaseForm {
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-- DON'T EDIT BELOW THIS LINE!!!
-    protected com.codename1.ui.Button gui_catalogue = new com.codename1.ui.Button();
-    protected com.codename1.ui.Button gui_commande = new com.codename1.ui.Button();
+    private com.codename1.ui.Button gui_catalogue = new com.codename1.ui.Button();
+    private com.codename1.ui.Button gui_commande = new com.codename1.ui.Button();
 
 
 // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -120,19 +120,21 @@ public class PanierForm extends BaseForm {
         setInlineAllStyles("bgColor:fbfcfe; bgImage:null;");
         setTitle("PanierForm");
         setName("PanierForm");
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredWidthMM((float)70.899475);
+        ((com.codename1.ui.layouts.LayeredLayout)getLayout()).setPreferredHeightMM((float)146.2963);
+        addComponent(gui_catalogue);
+        addComponent(gui_commande);
         gui_catalogue.setPreferredSizeStr("21.693121mm 6.878307mm");
         gui_catalogue.setText("Catalogue");
                 gui_catalogue.setInlineStylesTheme(resourceObjectInstance);
         gui_catalogue.setInlineAllStyles("font:3.0mm native:MainLight native:MainLight; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:247; bgImage:;");
         gui_catalogue.setName("catalogue");
+        ((com.codename1.ui.layouts.LayeredLayout)gui_catalogue.getParent().getLayout()).setInsets(gui_catalogue, "auto auto 3.7037058mm 7.671959mm").setReferenceComponents(gui_catalogue, "-1 -1 -1 -1").setReferencePositions(gui_catalogue, "0.0 0.0 0.0 0.0");
         gui_commande.setPreferredSizeStr("21.428572mm 6.878307mm");
         gui_commande.setText("Commande");
                 gui_commande.setInlineStylesTheme(resourceObjectInstance);
         gui_commande.setInlineAllStyles("font:2.5mm native:MainRegular native:MainRegular; border:roundRect +top-left +top-right +bottom-left +bottom-right 3.0mm; bgColor:1058d1; fgColor:ffffff; transparency:236; bgImage:;");
         gui_commande.setName("commande");
-        addComponent(gui_catalogue);
-        addComponent(gui_commande);
-        ((com.codename1.ui.layouts.LayeredLayout)gui_catalogue.getParent().getLayout()).setInsets(gui_catalogue, "auto auto 3.7037058mm 7.671959mm").setReferenceComponents(gui_catalogue, "-1 -1 -1 -1").setReferencePositions(gui_catalogue, "0.0 0.0 0.0 0.0");
         ((com.codename1.ui.layouts.LayeredLayout)gui_commande.getParent().getLayout()).setInsets(gui_commande, "auto 2.9100528mm 3.7037039mm auto").setReferenceComponents(gui_commande, "-1 -1 -1 -1").setReferencePositions(gui_commande, "0.0 0.0 0.0 0.0");
     }// </editor-fold>
 
